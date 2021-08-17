@@ -1,0 +1,64 @@
+# Include custom functions from $ZDOTDIR/.zsfn/*
+if [[ -d $ZDOTDIR/.zshfn.d ]] && [[ $(ls -A $ZDOTDIR/.zshfn.d) ]]; then
+  fpath=( $ZDOTDIR/.zshfn.d "${fpath[@]}" )
+  autoload -Uz $fpath[1]/*(.:t)
+fi
+
+# Path definition and customnization
+function git_current_branch() {
+  git_branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/";} {print $NF;}')
+
+  if [[ -z $(git status -s 2> /dev/null) ]]; then
+    git_dirty="%F{green}o%f"
+  else
+    git_dirty="%F{red}x%f"
+  fi
+
+  if [[ $git_branch == "" ]]; then
+    :
+  else
+    echo " %F{cyan}git(%f$git_branch:$git_dirty%F{cyan})%f"
+  fi
+}
+
+# Configure the zsh prompt
+setopt prompt_subst
+PROMPT='%F{blue}%n%f:%F{green}%m%f %~$(git_current_branch) > '
+
+# Set default editor
+if command -v nvim &> /dev/null; then
+  export VISUAL='nvim'
+elif command -v vim &> /dev/null; then
+  export VISUAL='vim'
+else
+  export VISUAL='vi'
+fi
+export EDITOR=$VISUAL
+
+# Configure colors
+[[ -f $ZDOTDIR/.zcolors ]] && source $ZDOTDIR/.zcolors
+
+# Configure persistent history
+HISTFILE=$ZDOTDIR/.zhistory
+HISTSIZE=4096
+HISTFILESIZE=4096
+SAVEHIST=4096
+setopt EXTENDED_HISTORY
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+
+# Key bindings
+
+# Load plugins
+if [[ -d $ZDOTDIR/.zplugins.d/zsh-vi-mode ]]; then
+  function zvm_config() {
+    ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+  }
+  source $ZDOTDIR/.zplugins.d/zsh-vi-mode/zsh-vi-mode.zsh
+fi
+
+# Load local config if present
+[[ -f $ZDOTDIR/.zshrc.local ]] && source $ZDOTDIR/.zshrc.local
+
+# Load aliases
+[[ -f $ZDOTDIR/.zshal ]] && source $ZDOTDIR/.zshal
