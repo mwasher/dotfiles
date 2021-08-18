@@ -19,6 +19,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'jmcantrell/vim-virtualenv'
 call plug#end()
 
 " Plugin options
