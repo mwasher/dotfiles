@@ -55,10 +55,10 @@ setopt SHARE_HISTORY
 # Key bindings
 
 # Setup pyenv only if found. Initial env set in zshenv
-if command -v pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
+ if command -v pyenv &> /dev/null; then
+   eval "$(pyenv init --path)"
+   eval "$(pyenv virtualenv-init -)"
+ fi
 
 # Load plugins
 if [[ -d $ZDOTDIR/.zplugins.d/zsh-vi-mode ]]; then
