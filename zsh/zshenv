@@ -1,3 +1,8 @@
+# For Mac add brew into the path
+if command -v /opt/homebrew/bin/brew &> /dev/null; then
+  eval $(/opt/homebrew//bin/brew shellenv)
+fi
+
 # Init pyenv only if found in the users path
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -8,14 +13,14 @@ fi
 # Define environment variables
 
 if [[ -z "$XDG_DATA_HOME" ]]; then
-	export XDG_DATA_HOME="$HOME/.local/share/"
+  export XDG_DATA_HOME="$HOME/.local/share/"
 fi
 
 if [[ -z "$XDG_CONFIG_HOME" ]]; then
-	export XDG_CONFIG_HOME="$HOME/.config/"
+  export XDG_CONFIG_HOME="$HOME/.config/"
 fi
 
 if [[ -d "$XDG_CONFIG_HOME/zsh" ]]; then
-	export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
+  export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
 fi
 
