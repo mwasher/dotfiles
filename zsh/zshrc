@@ -1,3 +1,8 @@
+# For Mac add brew into the path
+if command -v /opt/homebrew/bin/brew &> /dev/null; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 # Include custom functions from $ZDOTDIR/.zsfn/*
 if [[ -d $ZDOTDIR/.zshfn.d ]] && [[ $(ls -A $ZDOTDIR/.zshfn.d) ]]; then
   fpath=( $ZDOTDIR/.zshfn.d "${fpath[@]}" )
