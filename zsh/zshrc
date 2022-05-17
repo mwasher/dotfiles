@@ -60,14 +60,6 @@ if command -v pyenv &> /dev/null; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-# Load plugins
-if [[ -d $ZDOTDIR/.zplugins.d/zsh-vi-mode ]]; then
-  function zvm_config() {
-    ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
-  }
-  source $ZDOTDIR/.zplugins.d/zsh-vi-mode/zsh-vi-mode.zsh
-fi
-
 # Load local config if present
 [[ -f $ZDOTDIR/.zshrc.local ]] && source $ZDOTDIR/.zshrc.local
 
