@@ -19,7 +19,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jmcantrell/vim-virtualenv'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " Plugin options
@@ -41,7 +43,7 @@ let g:fzf_colors = {
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 let g:nord_uniform_diff_background = 1
-let g:NERDTreeShowHidden=1
+let g:NERDTreeShowHidden = 1
 let g:lightline = { 
   \ 'colorscheme': 'nord',
   \ 'active': {
@@ -49,6 +51,11 @@ let g:lightline = {
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \ },
   \ 'component_function': { 'gitbranch': 'gitbranch#name' } }
+
+" Python
+if exists("$VIRTUAL_ENV")
+  let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python3'
+endif
 
 " Remap leader to spacebar
 let mapleader=" "
@@ -120,3 +127,5 @@ au BufNewFile,BufRead *.py set tabstop=4
 au BufNewFile,BufRead *.py set shiftwidth=4
 au BufNewFile,BufRead *.py set softtabstop=4
 
+" Misc
+set pyxversion=3

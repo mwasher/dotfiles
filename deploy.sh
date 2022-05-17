@@ -16,8 +16,8 @@ echo 'Linking dotfiles:'
 # TODO: make sure zsh is installed and set as the shell for user
 echo '  zsh'
 mkdir -p $HOME/.config/zsh
-ln -sTf $PWD/zsh/zplugins.d $HOME/.config/zsh/.zplugins.d
-ln -sTf $PWD/zsh/zshfn.d $HOME/.config/zsh/.zshfn.d
+ln -sf $PWD/zsh/zplugins.d $HOME/.config/zsh/.zplugins.d
+ln -sf $PWD/zsh/zshfn.d $HOME/.config/zsh/.zshfn.d
 ln -sf $PWD/zsh/zshenv $HOME/.zshenv
 ln -sf $PWD/zsh/zshrc $HOME/.config/zsh/.zshrc
 ln -sf $PWD/zsh/zcolors $HOME/.config/zsh/.zcolors

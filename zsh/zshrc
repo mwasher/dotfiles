@@ -1,3 +1,8 @@
+# For Mac add brew into the path
+if command -v /opt/homebrew/bin/brew &> /dev/null; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
+
 # Include custom functions from $ZDOTDIR/.zsfn/*
 if [[ -d $ZDOTDIR/.zshfn.d ]] && [[ $(ls -A $ZDOTDIR/.zshfn.d) ]]; then
   fpath=( $ZDOTDIR/.zshfn.d "${fpath[@]}" )
@@ -55,10 +60,10 @@ setopt SHARE_HISTORY
 # Key bindings
 
 # Setup pyenv only if found. Initial env set in zshenv
-if command -v pyenv &> /dev/null; then
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-fi
+ if command -v pyenv &> /dev/null; then
+   eval "$(pyenv init --path)"
+   eval "$(pyenv virtualenv-init -)"
+ fi
 
 # Load local config if present
 [[ -f $ZDOTDIR/.zshrc.local ]] && source $ZDOTDIR/.zshrc.local
