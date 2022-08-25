@@ -1,3 +1,0 @@
-[submodule "zsh/zplugins.d/zsh-vi-mode"]
-	path = zsh/zplugins.d/zsh-vi-mode
-	url = https://github.com/jeffreytse/zsh-vi-mode.git
