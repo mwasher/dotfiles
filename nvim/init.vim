@@ -118,14 +118,17 @@ inoremap jk <ESC>
 nnoremap <leader>num :set number!<CR>
 nnoremap <leader>rel :set relativenumber!<CR>
 nnoremap <leader>h   :noh<CR>
-nnoremap <leader>n   :NERDTreeToggle<CR>
-nnoremap <leader>nf  :NERDTreeFind<CR>
+nnoremap <leader>t   :NERDTreeToggle<CR>
+nnoremap <leader>tf  :NERDTreeFind<CR>
 nnoremap <leader>f   :Files<CR>
+nnoremap 'n          :bnext<CR>
+nnoremap 'p          :bprev<CR>
+nnoremap 'l          :buffers<CR>
 
 " Filetype specifics
 au BufNewFile,BufRead *.py set tabstop=4
 au BufNewFile,BufRead *.py set shiftwidth=4
 au BufNewFile,BufRead *.py set softtabstop=4
 
-" Misc
+" Mnisc
 set pyxversion=3
