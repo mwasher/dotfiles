@@ -45,6 +45,11 @@ else
 fi
 export EDITOR=$VISUAL
 
+# Fix keycodes
+bindkey "^[[H"  beginning-of-line
+bindkey "^[[F"  end-of-line
+bindkey "^[[3~" delete-char
+
 # Configure colors
 [[ -f $ZDOTDIR/.zcolors ]] && source $ZDOTDIR/.zcolors
 
