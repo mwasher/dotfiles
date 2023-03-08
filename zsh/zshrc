@@ -31,9 +31,9 @@ function git_current_branch() {
 
 # Configure the zsh prompt
 setopt prompt_subst
-PROMPT='%F{yellow}%n%f:%F{blue}%m%f %~$(git_current_branch)'
+PROMPT='%F{green}%n%f@%F{blue}%m%f %~$(git_current_branch)'
 PROMPT+=$'\n'
-PROMPT+='%F{red}>%f '
+PROMPT+='%F{green}>%f '
 
 # Set default editor
 if command -v nvim &> /dev/null; then
