@@ -31,7 +31,7 @@ function git_current_branch() {
 
 # Configure the zsh prompt
 setopt prompt_subst
-PROMPT='%F{green}%n%f@%F{blue}%m%f %~$(git_current_branch)'
+PROMPT='%F{green}%n%f:%F{blue}%m%f %F{cyan}%~%f$(git_current_branch)'
 PROMPT+=$'\n'
 PROMPT+='%F{green}>%f '
 

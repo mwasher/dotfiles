@@ -20,6 +20,7 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
 call plug#end()
 
 " Plugin options
@@ -93,7 +94,6 @@ nnoremap <C-l> <C-w>l
 set ruler
 set cursorline
 set noshowmode
-set number
 set relativenumber
 set numberwidth=5
 set laststatus=2
@@ -122,6 +122,10 @@ nnoremap <leader>f   :Files<CR>
 nnoremap 'n          :bnext<CR>
 nnoremap 'p          :bprev<CR>
 nnoremap 'l          :buffers<CR>
+
+nmap <leader>c <Plug>OSCYankOperator
+nmap <leader>cc <leader>c_
+vmap <leader>c <Plug>OSCYankVisual
 
 " Filetype specifics
 au BufNewFile,BufRead *.py set tabstop=4
