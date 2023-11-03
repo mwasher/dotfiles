@@ -13,7 +13,6 @@ endif
 
 " Define plugins for vim-plug to load
 call plug#begin(data_dir.'/plugged')
-Plug 'arcticicestudio/nord-vim'
 Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
@@ -21,6 +20,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 " Plugin options
@@ -92,7 +92,6 @@ nnoremap <C-l> <C-w>l
 
 " Configure rulers and line number settings
 set ruler
-set cursorline
 set noshowmode
 set relativenumber
 set numberwidth=5
@@ -108,7 +107,7 @@ syntax on
 if !has('gui_running')
   set t_Co=256
 endif
-colorscheme nord
+colorscheme github_dark_dimmed
 
 " Custom shortcut mappings
 set timeoutlen=500

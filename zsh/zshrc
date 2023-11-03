@@ -25,15 +25,15 @@ function git_current_branch() {
   if [[ $git_branch == "" ]]; then
     :
   else
-    echo " %F{cyan}git(%f%F{white}$git_branch%f:$git_dirty%F{cyan})%f"
+    echo " %F{#39C5CF}git(%f%F{white}$git_branch%f:$git_dirty%F{cyan})%f"
   fi
 }
 
 # Configure the zsh prompt
 setopt prompt_subst
-PROMPT='%F{green}%n%f:%F{blue}%m%f %F{cyan}%~%f$(git_current_branch)'
+PROMPT='%F{#6BC46D}%n%f:%F{#6CB6FF}%m%f %F{#DCBDFB}%~%f$(git_current_branch)'
 PROMPT+=$'\n'
-PROMPT+='%F{green}>%f '
+PROMPT+='%F{#C69026}>%f '
 
 # Set default editor
 if command -v nvim &> /dev/null; then
@@ -51,9 +51,6 @@ bindkey "^[[H"  beginning-of-line
 bindkey "^[[F"  end-of-line
 bindkey "^[[3~" delete-char
 bindkey "^R"    history-incremental-search-backward
-
-# Configure colors
-[[ -f $ZDOTDIR/.zcolors ]] && source $ZDOTDIR/.zcolors
 
 # Configure persistent history
 HISTFILE=$ZDOTDIR/.zhistory

@@ -16,13 +16,9 @@ echo 'Linking dotfiles:'
 # TODO: make sure zsh is installed and set as the shell for user
 echo '  zsh'
 mkdir -p $HOME/.config/zsh
-ln -sf $PWD/zsh/zplugins.d $HOME/.config/zsh/.zplugins.d
-ln -sf $PWD/zsh/zshfn.d $HOME/.config/zsh/.zshfn.d
 ln -sf $PWD/zsh/zshenv $HOME/.zshenv
 ln -sf $PWD/zsh/zshrc $HOME/.config/zsh/.zshrc
-ln -sf $PWD/zsh/zcolors $HOME/.config/zsh/.zcolors
 ln -sf $PWD/zsh/zshal $HOME/.config/zsh/.zshal
-ln -sf $PWD/zsh/zshrc $HOME/.config/zsh/.zshrc
 
 # TODO: make sure nvim is installed
 echo '  nvim'
