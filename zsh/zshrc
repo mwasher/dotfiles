@@ -25,13 +25,13 @@ function git_current_branch() {
   if [[ $git_branch == "" ]]; then
     :
   else
-    echo " %F{gray}git(%f%F{yellow}$git_branch%f:$git_dirty%F{gray})%f"
+    echo " %F{cyan}git(%f%F{yellow}$git_branch%f%F{cyan}:%f$git_dirty%F{cyan})%f"
   fi
 }
 
 # Configure the zsh prompt
 setopt prompt_subst
-PROMPT='%F{blue}%(4~|.../%3~|%~)%f$(git_current_branch)'
+PROMPT='%F{red}%m%f %F{blue}%(4~|.../%3~|%~)%f$(git_current_branch)'
 PROMPT+=' %F{magenta}>%f '
 
 # Set default editor
