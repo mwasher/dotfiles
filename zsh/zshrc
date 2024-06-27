@@ -73,3 +73,7 @@ setopt SHARE_HISTORY
 
 # Load aliases
 [[ -f $ZDOTDIR/.zshal ]] && source $ZDOTDIR/.zshal
+
+# Load dircolors
+eval "$(dircolors ~/.dircolors)"
+

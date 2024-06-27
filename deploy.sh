@@ -19,6 +19,7 @@ mkdir -p $HOME/.config/zsh
 ln -sf $PWD/zsh/zshenv $HOME/.zshenv
 ln -sf $PWD/zsh/zshrc $HOME/.config/zsh/.zshrc
 ln -sf $PWD/zsh/zshal $HOME/.config/zsh/.zshal
+ln -sf $PWD/zsh/dircolors $HOME/.dircolors
 
 # TODO: make sure nvim is installed
 echo '  nvim'
