@@ -1,48 +1,29 @@
+unsetopt BEEP
+
 # For Mac add brew into the path
 if command -v /opt/homebrew/bin/brew &> /dev/null; then
   eval $(/opt/homebrew/bin/brew shellenv)
 fi
 
-# Include custom functions from $ZDOTDIR/.zsfn/*
-if [[ -d $ZDOTDIR/.zshfn.d ]] && [[ $(ls -A $ZDOTDIR/.zshfn.d) ]]; then
-  fpath=( $ZDOTDIR/.zshfn.d "${fpath[@]}" )
-  autoload -Uz $fpath[1]/*(.:t)
-fi
+# Load env variable exports
+[[ -f $ZDOTDIR/exports.zsh ]] && source $ZDOTDIR/exports.zsh 
 
-# Helper function to generate prompt string for git details
-function git_current_branch() {
-  # Pull out the name of the current git branch if in a repo
-  git_branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/";} {print $NF;}')
+# Load aliases
+[[ -f $ZDOTDIR/aliases.zsh ]] && source $ZDOTDIR/aliases.zsh
 
-  # Determine if all changes are committed or not
-  if [[ -z $(git status -s 2> /dev/null) ]]; then
-    git_dirty="%F{green}o%f"
-  else
-    git_dirty="%F{red}x%f"
-  fi
+# Load custom functions
+[[ -f $ZDOTDIR/helpers.zsh ]] && source $ZDOTDIR/helpers.zsh
 
-  # If we are in a git repo then form the prompt string to use later
-  if [[ $git_branch == "" ]]; then
-    :
-  else
-    echo " %F{cyan}git(%f%F{yellow}$git_branch%f%F{cyan}:%f$git_dirty%F{cyan})%f"
-  fi
-}
+# Load local config if present
+[[ -f $ZDOTDIR/.zlocal ]] && source $ZDOTDIR/.zlocal
+
+# Create directory for local installed tools
+mkdir -p $HOME/.local/bin
 
 # Configure the zsh prompt
 setopt prompt_subst
-PROMPT='%F{red}%m%f %F{blue}%(4~|.../%3~|%~)%f$(git_current_branch)'
-PROMPT+=' %F{magenta}>%f '
-
-# Set default editor
-if command -v nvim &> /dev/null; then
-  export VISUAL='nvim'
-elif command -v vim &> /dev/null; then
-  export VISUAL='vim'
-else
-  export VISUAL='vi'
-fi
-export EDITOR=$VISUAL
+PROMPT='%F{magenta}%m%f$(git_current_branch)'
+PROMPT+=' %F{yellow}->%f '
 
 # Fix keycodes
 bindkey -v
@@ -68,12 +49,39 @@ setopt SHARE_HISTORY
    eval "$(pyenv virtualenv-init -)"
  fi
 
-# Load local config if present
-[[ -f $ZDOTDIR/.zshrc.local ]] && source $ZDOTDIR/.zshrc.local
-
-# Load aliases
-[[ -f $ZDOTDIR/.zshal ]] && source $ZDOTDIR/.zshal
-
 # Load dircolors
 eval "$(dircolors ~/.dircolors)"
+
+# ZSH plugins to use, will be autoloaded below
+plugins=(
+  zsh-users/zsh-syntax-highlighting
+  jeffreytse/zsh-vi-mode
+  zsh-users/zsh-autosuggestions
+)
+
+# ZSH plugin configurations
+function zvm_config() {
+  ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+  ZVM_VI_HIGHLIGHT_FOREGROUND=black
+  ZVM_VI_HIGHLIGHT_BACKGROUND=white
+  ZVM_INIT_MODE=sourcing
+}
+
+# Set auto suggest completion to ctrl-space
+bindkey '^ ' autosuggest-accept
+
+# Load the plugins
+plugin-load $plugins
+
+# Source FZF and install for ZSH
+if [ ! -d ~/.local/share/fzf ]; then
+  echo "Cloning FZF..."
+  fzf_path="$HOME/.local/share/fzf"
+  git clone --quiet --depth 1 https://github.com/junegunn/fzf.git $fzf_path
+  $fzf_path/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
+  ln -sf $fzf_path/bin/fzf $HOME/.local/bin/fzf
+else
+  source $HOME/.local/share/fzf/shell/completion.zsh
+  source $HOME/.local/share/fzf/shell/key-bindings.zsh
+fi
 

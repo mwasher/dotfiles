@@ -13,43 +13,29 @@ endif
 
 " Define plugins for vim-plug to load
 call plug#begin(data_dir.'/plugged')
-Plug 'preservim/nerdtree'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'preservim/nerdtree'
 Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 " Plugin options
-let $FZF_DEFAULT_COMMAND = 'find . -type f -not -path "*/\.git/*"'
-let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4"
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.9, 'relative': v:true } }
-let g:fzf_colors = {
-  \ 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-let g:nord_uniform_diff_background = 1
 let g:NERDTreeShowHidden = 1
-let g:lightline = { 
-  \ 'colorscheme': 'nord',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], 
-  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-  \ },
-  \ 'component_function': { 'gitbranch': 'gitbranch#name' } }
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+
+function! LightlineLineinfo() abort
+    if winwidth(0) < 86
+        return ''
+    endif
+
+    let l:current_line = printf('%-3s', line('.'))
+    let l:max_line = printf('%-3s', line('$'))
+    let l:lineinfo = ' ' . l:current_line . '/' . l:max_line
+    return l:lineinfo
+endfunction
 
 " Python
 if exists("$VIRTUAL_ENV")
@@ -89,13 +75,15 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <C-p> <C-w>p
 
 " Configure rulers and line number settings
 set ruler
-set noshowmode
+set number
 set relativenumber
 set numberwidth=5
 set laststatus=2
+set noshowmode
 
 " Indentation and syntax
 set autoindent
@@ -115,21 +103,18 @@ inoremap jk <ESC>
 nnoremap <leader>num :set number!<CR>
 nnoremap <leader>rel :set relativenumber!<CR>
 nnoremap <leader>h   :noh<CR>
+nnoremap <leader>w   :tabnew<CR>
+nnoremap <leader>e   :tabnext<CR>
+nnoremap <leader>q   :tabprev<CR>
+nnoremap <leader>a   :bnext<CR>
 nnoremap <leader>t   :NERDTreeToggle<CR>
-nnoremap <leader>tf  :NERDTreeFind<CR>
-nnoremap <leader>f   :Files<CR>
-nnoremap 'n          :bnext<CR>
-nnoremap 'p          :bprev<CR>
-nnoremap 'l          :buffers<CR>
-
-nmap <leader>c <Plug>OSCYankOperator
-nmap <leader>cc <leader>c_
-vmap <leader>c <Plug>OSCYankVisual
+nnoremap <leader>ff  :Telescope find_files hidden=true<CR>
+nnoremap <leader>fg  :Telescope live_grep<CR>
+nnoremap <leader>fb  :Telescope buffers<CR>
+nnoremap <leader>fh  :Telescope help_tags<CR>
 
 " Filetype specifics
 au BufNewFile,BufRead *.py set tabstop=4
 au BufNewFile,BufRead *.py set shiftwidth=4
 au BufNewFile,BufRead *.py set softtabstop=4
 
-" Mnisc
-set pyxversion=3

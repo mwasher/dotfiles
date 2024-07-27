@@ -1,21 +1,12 @@
-# Init pyenv only if found in the users path
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv &> /dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
-# Define environment variables
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 
-if [[ -z "$XDG_DATA_HOME" ]]; then
-  export XDG_DATA_HOME="$HOME/.local/share/"
-fi
-
-if [[ -z "$XDG_CONFIG_HOME" ]]; then
-  export XDG_CONFIG_HOME="$HOME/.config/"
-fi
-
-if [[ -d "$XDG_CONFIG_HOME/zsh" ]]; then
-  export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
-fi
-
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
