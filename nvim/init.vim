@@ -45,7 +45,6 @@ function! LightlineLineinfo() abort
 endfunction
 
 let g:everforest_better_performance = 1
-let g:everforest_background = 'hard'
 
 " Colors and appearance
 if has('termguicolors')
