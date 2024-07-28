@@ -81,14 +81,28 @@ bindkey '^ ' autosuggest-accept
 plugin-load $plugins
 
 # Source FZF and install for ZSH
-if [ ! -d ~/.local/share/fzf ]; then
+fzf_path="$HOME/.local/share/fzf"
+if [[ ! -d $fzf_path ]]; then
   echo "Cloning FZF..."
-  fzf_path="$HOME/.local/share/fzf"
   git clone --quiet --depth 1 https://github.com/junegunn/fzf.git $fzf_path
   $fzf_path/install --key-bindings --completion --no-update-rc --no-bash --no-zsh
-  ln -sf $fzf_path/bin/fzf $HOME/.local/bin/fzf
+  ln -s $fzf_path/bin/fzf $HOME/.local/bin/fzf
 else
-  source $HOME/.local/share/fzf/shell/completion.zsh
-  source $HOME/.local/share/fzf/shell/key-bindings.zsh
+  source $fzf_path/shell/completion.zsh
+  source $fzf_path/shell/key-bindings.zsh
 fi
 
+# Source and use Starship prompt if available
+starship_path="$HOME/.local/share/starship"
+if [[ ! -d $starship_path ]]; then
+  echo "Cloning Starship..."
+  mkdir -p $starship_path
+  curl -sS https://starship.rs/install.sh | sh -s -- -b $starship_path -y
+  ln -s $starship_path/starship $HOME/.local/bin/starship
+else
+  if command -v starship &> /dev/null; then
+    eval "$(starship init zsh)"
+  fi
+fi
+
+  

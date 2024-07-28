@@ -31,6 +31,10 @@ echo '  wezterm'
 mkdir -p $HOME/.config/wezterm
 ln -sf $PWD/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
 
+echo '  starship'
+mkdir -p $HOME/.config/starship
+ln -sf $PWD/starship/starship.toml $HOME/.config/starship/starship.toml
+
 echo 'Creating .hushlogin'
 touch ~/.hushlogin
 
