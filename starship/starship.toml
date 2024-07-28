@@ -31,11 +31,11 @@ truncate_to_repo = true # truncates directory to root folder if in github repo
 style = "italic blue"
 
 [cmd_duration]
-min_time = 200
+min_time = 1000
 show_milliseconds = false
 disabled = false
 style = "italic red"
-format = "[$duration]($style)"
+format = "took [$duration]($style)"
 
 [aws]
 symbol = "  "
