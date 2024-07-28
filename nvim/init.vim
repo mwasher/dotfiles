@@ -17,13 +17,14 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
-Plug 'projekt0n/github-nvim-theme'
+Plug 'sainnhe/everforest'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Plugin options
 let g:NERDTreeShowHidden = 1
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'everforest',
       \ }
 
 function! LightlineLineinfo() abort
@@ -37,10 +38,20 @@ function! LightlineLineinfo() abort
     return l:lineinfo
 endfunction
 
-" Python
-if exists("$VIRTUAL_ENV")
-  let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python3'
+let g:everforest_better_performance = 1
+let g:everforest_background = 'hard'
+
+" Colors and appearance
+if has('termguicolors')
+  set termguicolors
 endif
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+set background=dark
+colorscheme everforest
 
 " Remap leader to spacebar
 let mapleader=" "
@@ -90,12 +101,6 @@ set autoindent
 filetype on
 filetype plugin indent on
 syntax on
-
-" Colors and appearance
-if !has('gui_running')
-  set t_Co=256
-endif
-colorscheme github_dark_dimmed
 
 " Custom shortcut mappings
 set timeoutlen=500
