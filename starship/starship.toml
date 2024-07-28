@@ -64,6 +64,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
+style = "yellow"
 symbol = " "
 
 [git_status]
