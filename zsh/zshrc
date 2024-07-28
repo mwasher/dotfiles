@@ -49,8 +49,15 @@ setopt SHARE_HISTORY
    eval "$(pyenv virtualenv-init -)"
  fi
 
-# Load dircolors
-eval "$(dircolors ~/.dircolors)"
+# Platform specific
+case "$(uname -s)" in
+  Linux)
+    eval "$(dircolors ~/.dircolors)"
+  	;;
+
+  Darwin)
+	  ;;
+esac
 
 # ZSH plugins to use, will be autoloaded below
 plugins=(

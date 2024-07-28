@@ -24,8 +24,14 @@ call plug#end()
 " Plugin options
 let g:NERDTreeShowHidden = 1
 let g:lightline = {
-      \ 'colorscheme': 'everforest',
-      \ }
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+  \ },
+  \ 'inactive': {
+  \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+  \ },
+  \ 'colorscheme': 'everforest',
+\ }
 
 function! LightlineLineinfo() abort
     if winwidth(0) < 86
