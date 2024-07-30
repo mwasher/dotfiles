@@ -17,7 +17,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
-Plug 'sainnhe/everforest'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
@@ -30,7 +30,7 @@ let g:lightline = {
   \ 'inactive': {
   \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
   \ },
-  \ 'colorscheme': 'everforest',
+  \ 'colorscheme': 'catppuccin'
 \ }
 
 function! LightlineLineinfo() abort
@@ -56,7 +56,7 @@ if !has('gui_running')
 endif
 
 set background=dark
-colorscheme everforest
+colorscheme catppuccin-mocha
 
 " Remap leader to spacebar
 let mapleader=" "
