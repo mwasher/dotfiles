@@ -56,7 +56,7 @@ if !has('gui_running')
 endif
 
 set background=dark
-colorscheme catppuccin-mocha
+colorscheme catppuccin-frappe
 
 " Remap leader to spacebar
 let mapleader=" "
