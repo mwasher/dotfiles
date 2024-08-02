@@ -10,7 +10,11 @@ function imap_key(shortcut, command)
   map_key('i', shortcut, command)
 end
 
-imap_key('jk', '<ESC>') 
+function vmap_key(shortcut, command)
+  map_key('v', shortcut, command)
+end
+
+imap_key('jk', '<ESC>')
 
 nmap_key('<C-j>', '<C-w>j')
 nmap_key('<C-k>', '<C-w>k')
@@ -31,4 +35,7 @@ nmap_key('<leader>tg', '<CMD>Telescope live_grep<CR>')
 nmap_key('<leader>tb', '<CMD>Telescope buffers<CR>')
 nmap_key('<leader>th', '<CMD>Telescope help_tags<CR>')
 nmap_key('<leader>to', '<CMD>Telescope file_browser<CR>')
+
+vmap_key('<', '<gv')                         -- allow multiple indent/dedent of same block
+vmap_key('>', '>gv')
 
