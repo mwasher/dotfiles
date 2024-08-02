@@ -1,2 +1,2 @@
-lua require("init")
+lua require('config')
 
