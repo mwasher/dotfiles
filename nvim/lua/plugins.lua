@@ -18,10 +18,10 @@ require('lazy').setup({
   spec = {
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope.nvim', tag = '0.1.8' },
+    { 'nvim-telescope/telescope-file-browser.nvim' },
     { 'preservim/nerdtree' },
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-    { 'ryanoasis/vim-devicons' }
   },
   checker = { enabled = true }
 })
@@ -29,3 +29,4 @@ require('lazy').setup({
 require('lualine').setup {
   options = { theme  = 'catppuccin' },
 }
+
