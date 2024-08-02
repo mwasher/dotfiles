@@ -20,6 +20,9 @@ vim.opt.swapfile = false
 vim.opt.wrap = false
 vim.opt.showbreak= '↪'                    -- prepend to wrapped lines
 
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 vim.opt.ruler = true
 vim.opt.number = true
 vim.opt.numberwidth = 5 

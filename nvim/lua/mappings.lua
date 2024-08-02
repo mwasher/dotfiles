@@ -22,6 +22,9 @@ nmap_key('<C-h>', '<C-w>h')
 nmap_key('<C-l>', '<C-w>l')
 nmap_key('<C-p>', '<C-w>p')
 
+nmap_key('vv', '<C-w>v')                    -- easy window splitting
+nmap_key('ss', '<C-w>s')
+
 nmap_key('<leader>h', '<CMD>noh<CR>')
 
 nmap_key('<leader>w', '<CMD>tabnew<CR>')
