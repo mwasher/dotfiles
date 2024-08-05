@@ -25,7 +25,7 @@ esac
 
 echo '  nvim'
 mkdir -p $HOME/.config/nvim
-ln -sf $PWD/nvim/init.vim $HOME/.config/nvim/init.vim
+ln -sf $PWD/nvim/init.lua $HOME/.config/nvim/init.lua
 ln -sf $PWD/nvim/lua $HOME/.config/nvim/lua
 
 echo '  wezterm'
