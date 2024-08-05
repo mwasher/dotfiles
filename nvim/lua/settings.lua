@@ -1,8 +1,5 @@
 vim.g.mapleader = ' '
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 vim.opt.encoding = 'utf-8'
 vim.opt.backspace = 'indent,eol,start'    -- backspace deletes tabs when expandtab true
 vim.opt.history = 1000

@@ -19,7 +19,6 @@ require('lazy').setup({
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope.nvim', tag = '0.1.8' },
     { 'nvim-telescope/telescope-file-browser.nvim' },
-    { 'preservim/nerdtree' },
     { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
     { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   },
