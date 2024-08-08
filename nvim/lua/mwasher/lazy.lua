@@ -14,18 +14,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  spec = {
-    { 'nvim-lua/plenary.nvim' },
-    { 'nvim-telescope/telescope.nvim', tag = '0.1.8' },
-    { 'nvim-telescope/telescope-file-browser.nvim' },
-    { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } },
-    { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+require('lazy').setup {
+  spec = LAZY_PLUGIN_SPEC,                      -- defined in load.lua
+  install = {
+    colorscheme = { 'catppuccin', 'default' } 
   },
-  checker = { enabled = true }
-})
-
-require('lualine').setup {
-  options = { theme  = 'catppuccin' },
+  checker = { 
+    enabled = true
+  }
 }
 

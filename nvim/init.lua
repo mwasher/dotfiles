@@ -1,2 +1,2 @@
-require('config')
+require('mwasher.load')
 
