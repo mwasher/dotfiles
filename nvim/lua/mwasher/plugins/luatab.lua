@@ -3,7 +3,7 @@ local plugin = {
 }
 
 function plugin.config()
-  require('luatab').setup {}
+  require('luatab').setup()
 end
 
 return plugin

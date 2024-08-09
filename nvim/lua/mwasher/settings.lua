@@ -44,6 +44,7 @@ vim.cmd([[
   au FileType python set ts=4 sw=4
 ]])
 
+vim.opt.pumblend = 10
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "grey", bold=true }) -- highlight cur. line num

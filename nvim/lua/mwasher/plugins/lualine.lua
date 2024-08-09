@@ -3,11 +3,11 @@ local plugin = {
 }
 
 function plugin.config()
-  require('lualine').setup {
+  require('lualine').setup({
     options = {
-      theme  = 'catppuccin'
+      theme  = 'catppuccin',
     }
-  }
+  })
 end
 
 return plugin

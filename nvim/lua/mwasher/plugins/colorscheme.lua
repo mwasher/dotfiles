@@ -2,7 +2,7 @@ local plugin = {
   'catppuccin/nvim',
   name = 'catppuccin',
   lazy = false,
-  priority = 1000
+  priority = 1000,
 }
 
 function plugin.config()
