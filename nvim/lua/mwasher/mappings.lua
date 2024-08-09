@@ -41,6 +41,8 @@ nmap_key('<M-i>', '<CMD>tabprev<CR>')
 
 nmap_key('<leader>b', '<CMD>bnext<CR>')
 
+nmap_key('<leader>tr', '<CMD>NvimTreeToggle<CR>')
+
 nmap_key('<leader>tf', '<CMD>Telescope find_files hidden=true<CR>')
 nmap_key('<leader>tg', '<CMD>Telescope live_grep<CR>')
 nmap_key('<leader>tb', '<CMD>Telescope buffers<CR>')
