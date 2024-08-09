@@ -14,6 +14,8 @@ vim.opt.swapfile = false
 
 vim.opt.wrap = false
 vim.opt.showbreak= '↪'                    -- prepend to wrapped lines
+vim.opt.fillchars = { eob = ' ' }         -- remove annoying ~ characters
+vim.opt.pumblend = 10                     -- pop up transparency
 
 vim.opt.splitbelow = true                 -- force all splits right and down
 vim.opt.splitright = true
@@ -44,7 +46,6 @@ vim.cmd([[
   au FileType python set ts=4 sw=4
 ]])
 
-vim.opt.pumblend = 10
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "grey", bold=true }) -- highlight cur. line num
