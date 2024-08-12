@@ -54,10 +54,12 @@ symbol = " "
 symbol = " "
 
 [git_branch]
+disabled = false
 style = "yellow"
 symbol = " "
 
 [git_status]
+disabled = false
 format = '([\[$all_status$ahead_behind\]]($style) )'
 stashed = "[${count}*](green)" 
 modified = "[${count}+](yellow)" 
@@ -69,6 +71,7 @@ untracked = "[${count}?](blue)"
 staged = "[${count}+](green)" 
 
 [git_state]
+disabled = false
 style =	"red"
 format = "[$state( $progress_current/$progress_total) ]($style)"
 rebase = "rebase"

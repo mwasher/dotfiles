@@ -1,2 +1,2 @@
-require('mwasher.load')
+require('mwasher')
 

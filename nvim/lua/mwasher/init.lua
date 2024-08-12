@@ -1,10 +1,11 @@
 require('mwasher.settings')
 require('mwasher.mappings')
 
-LAZY_PLUGIN_SPEC = {}
+-- build plugin array and then load lazy plugin manager
+LAZY_PLUGINS = {}
 
 local function load_plugin(item)
-  table.insert(LAZY_PLUGIN_SPEC, { import = item })
+  table.insert(LAZY_PLUGINS, { import = item })
 end
 
 load_plugin('mwasher.plugins.colorscheme')
@@ -20,5 +21,6 @@ load_plugin('mwasher.plugins.schemastore')
 load_plugin('mwasher.plugins.mason')
 load_plugin('mwasher.plugins.lspconfig')
 load_plugin('mwasher.plugins.cmp')
+load_plugin('mwasher.plugins.none-ls')
 require('mwasher.lazy')
 

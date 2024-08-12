@@ -3,6 +3,8 @@ local plugin = {
 }
 
 function plugin.config()
+  local icons = require "mwasher.icons"
+
   require('nvim-tree').setup({
     view = { 
       width = 30,
