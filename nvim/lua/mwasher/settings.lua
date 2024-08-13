@@ -22,16 +22,15 @@ vim.opt.splitright = true
 
 vim.opt.ruler = true
 vim.opt.number = true
-vim.opt.numberwidth = 4 
+vim.opt.numberwidth = 4
 vim.opt.relativenumber = true
 vim.opt.cursorline = true                 -- set so we can highlight the current line num
-vim.opt.cursorlineopt = 'number'
 
 vim.opt.signcolumn = 'yes'
 vim.opt.showcmd = true                    -- always show command bar at the bottom
 vim.opt.showmode = false                  -- do not need mode with lua-line plugin
 
-vim.opt.showmatch  = true 
+vim.opt.showmatch  = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

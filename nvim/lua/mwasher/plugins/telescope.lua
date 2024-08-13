@@ -4,6 +4,11 @@ local plugin = {
 }
 
 function plugin.config()
+  require('telescope').setup({
+    defaults = {
+      winblend = 15,
+    }
+  })
 end
 
 return plugin

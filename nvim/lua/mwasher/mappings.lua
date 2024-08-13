@@ -23,14 +23,18 @@ vim.g.maplocalleader = ' '
 
 imap_key('jk', '<ESC>')                           -- rebind normal mode escape
 
-nmap_key('<C-j>', '<C-w>j')                       -- simplified pane swapping
-nmap_key('<C-k>', '<C-w>k')
-nmap_key('<C-h>', '<C-w>h')
-nmap_key('<C-l>', '<C-w>l')
-nmap_key('<C-p>', '<C-w>p')
+nmap_key('<M-j>', '<C-w>j')                       -- simplified pane swapping
+nmap_key('<M-k>', '<C-w>k')
+nmap_key('<M-h>', '<C-w>h')
+nmap_key('<M-l>', '<C-w>l')
 
 nmap_key('vv', '<C-w>v')                          -- simplified splitting
 nmap_key('ss', '<C-w>s')
+
+vmap_key('<', '<gv')                              -- allow multiple block indenting
+vmap_key('>', '>gv')
+
+xmap_key('p', 'P')                                -- keep copy register the same when pasting
 
 nmap_key('<leader>h', '<CMD>noh<CR>')             -- clear search higights
 nmap_key('<leader>w', '<CMD>set wrap!<CR>')       -- toggle linewrap
@@ -55,12 +59,8 @@ nmap_key('<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
 nmap_key('<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
 nmap_key('<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 nmap_key('<leader>gl', '<cmd>lua vim.diagnostic.open_float()<CR>')
+nmap_key('<leader>K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
 nmap_key('<leader>lf', '<cmd>lua vim.lsp.buf.format()<CR>')
 nmap_key('<leader>lj', '<cmd>lua vim.diagnostic.goto_next()<cr>')
 nmap_key('<leader>lk', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-
-vmap_key('<', '<gv')                              -- allow multiple block indenting
-vmap_key('>', '>gv')
-
-xmap_key('p', 'P')                                -- keep copy register the same when pasting
 

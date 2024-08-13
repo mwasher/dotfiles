@@ -29,8 +29,8 @@ function plugin.common_capabilities()
 end
 
 function plugin.config()
-  local lspconfig = require 'lspconfig'
-  local icons = require 'mwasher.icons'
+  local lspconfig = require('lspconfig')
+  local icons = require('mwasher.icons')
 
   local servers = {
     'pyright',

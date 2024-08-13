@@ -7,6 +7,7 @@ function plugin.config()
 
   require('nvim-tree').setup({
     view = { 
+      relativenumber = true,
       width = 30,
       adaptive_size = true,
       side = 'right',
