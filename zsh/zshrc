@@ -51,9 +51,9 @@ esac
 
 # ZSH plugins to use, will be autoloaded below
 plugins=(
+  zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
   jeffreytse/zsh-vi-mode
-  zsh-users/zsh-autosuggestions
 )
 
 # ZSH plugin configurations
