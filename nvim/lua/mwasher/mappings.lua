@@ -28,6 +28,9 @@ nmap_key('<C-k>', '<C-w>k')
 nmap_key('<C-h>', '<C-w>h')
 nmap_key('<C-l>', '<C-w>l')
 
+nmap_key('<C-u>', '<C-u>zz')                      -- center on cursor when scrolling
+nmap_key('<C-d>', '<C-d>zz')
+
 nmap_key('vv', '<C-w>v')                          -- simplified splitting
 nmap_key('ss', '<C-w>s')
 
@@ -42,8 +45,6 @@ nmap_key('<leader>w', '<CMD>set wrap!<CR>')       -- toggle linewrap
 nmap_key('<C-o>', '<CMD>tabnew<CR>')              -- tabs controls
 nmap_key('<C-p>', '<CMD>tabnext<CR>')
 nmap_key('<C-i>', '<CMD>tabprev<CR>')
-
-nmap_key('<leader>b', '<CMD>bnext<CR>')
 
 -- file searching/browsing
 nmap_key('<leader>tr', '<CMD>NvimTreeToggle<CR>')
