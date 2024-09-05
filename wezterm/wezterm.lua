@@ -20,11 +20,13 @@ config = {
     bottom = 5,
   },
 
+  adjust_window_size_when_changing_font_size = false,
+
   enable_tab_bar = true,
   hide_tab_bar_if_only_one_tab = true,
   tab_bar_at_bottom = true,
   use_fancy_tab_bar = false,
-  tab_max_width = 50,
+  tab_max_width = 30,
 
   colors = {
     tab_bar = {
@@ -35,7 +37,7 @@ config = {
   leader = { key = 'Space', mods = 'ALT', timeout_milliseconds = 500 },
 
   keys = {
-    { key = 'l', mods = 'ALT', action = act.ShowLauncher, },
+    { key = 'n', mods = 'ALT', action = act.ShowLauncher, },
     { key = 'v', mods = 'ALT|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
     { key = 's', mods = 'ALT|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' }, },
     { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left', },
