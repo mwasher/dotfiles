@@ -19,7 +19,7 @@ case "$(uname -s)" in
 	  ;;
 
   Linux)
-    ln -sf $PWD/zsh/dircolors $HOME/.dircolors
+    ln -sf $PWD/zsh/dircolors $HOME/.config/zsh/.dircolors
   	;;
 esac
 

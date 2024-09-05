@@ -48,4 +48,3 @@ vim.cmd([[
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
 vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = "grey", bold=true }) -- highlight cur. line num
-

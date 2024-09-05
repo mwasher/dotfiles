@@ -39,7 +39,9 @@ setopt SHARE_HISTORY
 # Platform specific
 case "$(uname -s)" in
   Linux)
-    eval "$(dircolors ~/.dircolors)"
+    # Load env variable exports
+    [[ -f $ZDOTDIR/.dircolors ]]
+      eval "$(dircolors $ZDOTDIR/.dircolors)"
   	;;
 
   Darwin)
