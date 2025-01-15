@@ -53,15 +53,3 @@ nmap_key('<leader>tg', '<CMD>Telescope live_grep<CR>')
 nmap_key('<leader>tb', '<CMD>Telescope buffers<CR>')
 nmap_key('<leader>th', '<CMD>Telescope help_tags<CR>')
 nmap_key('<leader>to', '<CMD>Telescope file_browser<CR>')
-
--- lsp 
-nmap_key('<leader>gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-nmap_key('<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-nmap_key('<leader>gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-nmap_key('<leader>gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-nmap_key('<leader>gl', '<cmd>lua vim.diagnostic.open_float()<CR>')
-nmap_key('<leader>K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
-nmap_key('<leader>lf', '<cmd>lua vim.lsp.buf.format()<CR>')
-nmap_key('<leader>lj', '<cmd>lua vim.diagnostic.goto_next()<cr>')
-nmap_key('<leader>lk', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
-
