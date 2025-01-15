@@ -34,6 +34,8 @@ function plugin.config()
   local servers = {
     'lua_ls',
     'jsonls',
+    'pyright',
+    'gopls',
   }
 
   local default_diagnostic_config = {

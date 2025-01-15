@@ -15,11 +15,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  spec = LAZY_PLUGINS,                      -- defined in load.lua
+  spec = LAZY_PLUGINS,                      -- defined in init.lua
   install = {
     colorscheme = { 'catppuccin', 'default' },
   },
-  checker = { 
+  checker = {
     enabled = true,
     notify = false,
   }

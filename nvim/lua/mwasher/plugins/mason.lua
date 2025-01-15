@@ -13,6 +13,8 @@ function plugin.config()
     ensure_installed = {
       'lua_ls',
       'jsonls',
+      'pyright',
+      'gopls',
     }
   })
 end
