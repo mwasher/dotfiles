@@ -17,7 +17,7 @@ if command -v nvim &> /dev/null; then
 fi
 
 if command -v bat &> /dev/null; then
-  alias cat="bat --theme \"ansi-dark\"" 
-  alias catp="bat -p --theme \"ansi-dark\"" 
+  alias cat="bat --theme \"ansi\"" 
+  alias catp="bat -p --theme \"ansi\"" 
 fi
 
