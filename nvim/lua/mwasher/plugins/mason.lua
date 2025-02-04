@@ -14,7 +14,6 @@ function plugin.config()
       'lua_ls',
       'jsonls',
       'pyright',
-      'gopls',
     }
   })
 end

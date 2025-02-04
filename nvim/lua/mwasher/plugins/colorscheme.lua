@@ -1,12 +1,15 @@
 local plugin = {
-  'catppuccin/nvim',
-  name = 'catppuccin',
+  'dgox16/oldworld.nvim',
   lazy = false,
   priority = 1000,
 }
 
 function plugin.config()
-  vim.cmd.colorscheme 'catppuccin-frappe'
+  require('oldworld').setup({
+    variant = 'default',
+  })
+
+  vim.cmd.colorscheme 'oldworld'
 end
 
 return plugin
