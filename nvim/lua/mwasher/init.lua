@@ -26,6 +26,7 @@ else
   load_plugin('mwasher.plugins.lspconfig')
   load_plugin('mwasher.plugins.cmp')
   load_plugin('mwasher.plugins.none-ls')
+  load_plugin('mwasher.plugins.mason-null-ls')
 end
 
 require('mwasher.lazy')

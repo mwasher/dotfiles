@@ -34,6 +34,9 @@ nmap_key('<C-d>', '<C-d>zz')
 nmap_key('vv', '<C-w>v')                          -- simplified splitting
 nmap_key('ss', '<C-w>s')
 
+nmap_key('hhh', '<C-w><')
+nmap_key('lll', '<C-w>>')
+
 vmap_key('<', '<gv')                              -- allow multiple block indenting
 vmap_key('>', '>gv')
 
