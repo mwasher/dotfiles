@@ -13,8 +13,8 @@ format = '[$hostname](purple) '
 trim_at = "."
 
 [character]                            
-success_symbol = "[➜](yellow)"     
-error_symbol = "[✗](red)"
+success_symbol = "[➜](green) "     
+error_symbol = "[✗](red) "
 
 [directory]
 read_only = " "
