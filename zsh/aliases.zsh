@@ -12,12 +12,10 @@ case "$(uname -s)" in
 esac
 
 if command -v nvim &> /dev/null; then
-    alias vi="nvim"
-    alias vim="nvim"
+  alias vi="nvim"
+  alias vim="nvim"
 fi
 
-if command -v bat &> /dev/null; then
-  alias cat="bat --theme \"ansi\"" 
-  alias catp="bat -p --theme \"ansi\"" 
-fi
+alias cat="bat --theme \"ansi\"" 
+alias catp="bat -p --theme \"ansi\"" 
 

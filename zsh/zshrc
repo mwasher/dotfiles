@@ -1,5 +1,20 @@
 unsetopt BEEP
 
+# Platform specific
+case "$(uname -s)" in
+  Linux)
+    # Load env variable exports
+    [[ -f $ZDOTDIR/.dircolors ]]
+      eval "$(dircolors $ZDOTDIR/.dircolors)"
+  	;;
+
+  Darwin)
+    if command -v /opt/homebrew/bin/brew &> /dev/null; then
+      eval $(/opt/homebrew/bin/brew shellenv)
+    fi
+	  ;;
+esac
+
 # Load env variable exports
 [[ -f $ZDOTDIR/exports.zsh ]] && source $ZDOTDIR/exports.zsh 
 
@@ -35,21 +50,6 @@ SAVEHIST=4096
 setopt EXTENDED_HISTORY
 setopt HIST_REDUCE_BLANKS
 setopt SHARE_HISTORY
-
-# Platform specific
-case "$(uname -s)" in
-  Linux)
-    # Load env variable exports
-    [[ -f $ZDOTDIR/.dircolors ]]
-      eval "$(dircolors $ZDOTDIR/.dircolors)"
-  	;;
-
-  Darwin)
-    if command -v /opt/homebrew/bin/brew &> /dev/null; then
-      eval $(/opt/homebrew/bin/brew shellenv)
-    fi
-	  ;;
-esac
 
 # ZSH plugins to use, will be autoloaded below
 plugins=(
