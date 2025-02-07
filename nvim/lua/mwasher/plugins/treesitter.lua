@@ -11,7 +11,7 @@ function plugin.config()
       enable = true,
       additional_vim_regex_highlighting = false,
     },
-    indent = { enable = true },  
+    indent = { enable = true },
   })
 end
 
