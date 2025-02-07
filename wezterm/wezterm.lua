@@ -10,8 +10,9 @@ local config = {
 
   audible_bell = "Disabled",
 
-  font = wezterm.font("MesloLGS Nerd Font Mono"),
+  font = wezterm.font("Iosevka Nerd Font Mono"),
   font_size = 12,
+  line_height = 1.0,
 
   window_decorations = "RESIZE",
   window_padding = {
