@@ -9,7 +9,6 @@ local plugin = {
 function plugin.config()
   require("mason-null-ls").setup({
     ensure_installed = {
-      'mypy',
       'black',
     }
   })
