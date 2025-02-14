@@ -19,7 +19,7 @@ local config = {
     left = 10,
     right = 0,
     top = 5,
-    bottom = 5,
+    bottom = 0,
   },
   window_frame = {
     font = wezterm.font { family = 'MesloLGS Nerd Font Mono', weight = 'Bold' },
