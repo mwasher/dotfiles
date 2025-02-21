@@ -24,10 +24,11 @@ else
   load_plugin('mwasher.plugins.schemastore')
   load_plugin('mwasher.plugins.mason')
   load_plugin('mwasher.plugins.lspconfig')
-  load_plugin('mwasher.plugins.cmp')
+  load_plugin('mwasher.plugins.nvim-cmp')
   load_plugin('mwasher.plugins.none-ls')
   load_plugin('mwasher.plugins.mason-null-ls')
   load_plugin('mwasher.plugins.neoscroll')
+  load_plugin('mwasher.plugins.venv-selector')
 end
 
 require('mwasher.lazy')
