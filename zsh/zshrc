@@ -72,12 +72,6 @@ bindkey '^ ' autosuggest-accept
 # Load the plugins
 plugin-load $plugins
 
-# Setup pyenv only if found. Initial env set in zshenv
-if command -v pyenv &> /dev/null; then
-  eval "$(pyenv init --path)"
-  eval "$(pyenv virtualenv-init -)"
-fi
-
 # Source FZF and install for ZSH
 fzf_path="$HOME/.local/share/fzf"
 if [[ ! -d $fzf_path ]]; then
@@ -104,3 +98,5 @@ else
 fi
 
   
+
+. "$HOME/.local/share/../bin/env"
