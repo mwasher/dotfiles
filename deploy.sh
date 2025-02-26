@@ -1,5 +1,3 @@
-#this is a test
-
 #!/usr/bin/env zsh
 
 mkdir -p $HOME/.config
