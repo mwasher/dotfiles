@@ -1,6 +1,8 @@
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 
+alias aenv="source .venv/bin/activate"
+
 alias vis="vim -S ~/.session.vim"
 
 case "$(uname -s)" in
