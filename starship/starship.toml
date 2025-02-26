@@ -31,7 +31,6 @@ $character\
 disabled = true
 
 [hostname]
-show_always = true
 style = "bg:#2e3440"
 ssh_only = false
 format = '[ $hostname ]($style)'
