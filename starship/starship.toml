@@ -58,7 +58,7 @@ style = "bg:#4c566a"
 format = '[ $symbol ($version) ]($style)'
 
 [python]
-symbol = " "
+symbol = "" 
 style = "bg:#4c566a"
 format = '[ $symbol ($version) ($virtualenv) ]($style)'
 pyenv_prefix = "venv "
