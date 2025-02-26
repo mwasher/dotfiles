@@ -1,176 +1,145 @@
-palette = "custom_pallete"
+format = """
+[░▒▓](#2e3440)\
+$os\
+$hostname\
+[](bg:#3b4252 fg:#2e3440)\
+$directory\
+[](fg:#3b4252 bg:#434c5e)\
+$git_branch\
+$git_status\
+[](fg:#434c5e bg:#4c566a)\
+$c\
+$python\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#4c566a bg:#2e3440)\
+$docker_context\
+[](fg:#2e3440)\
+\n
+$cmd_duration\
+$character\
+"""
 
-[palettes.custom_pallete]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-peach = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-teal = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
-
-[username]
+[line_break]
 disabled = true
-style_user = "green"
-style_root = "red"
-format = "[$user]($style) on "
 
 [hostname]
-disabled = false
+show_always = true
+style = "bg:#2e3440"
 ssh_only = false
-format = "[$hostname](pink):"
-trim_at = "."
+format = '[ $hostname ]($style)'
+disabled = false
 
-[character]                            
-success_symbol = "[➜](green) "     
-error_symbol = "[✗](red) "
+[os]
+style = "bg:#9A348E"
+disabled = true # Disabled by default
 
 [directory]
-read_only = " "
+style = "bg:#3b4252"
+format = "[ $path ]($style)"
 truncation_length = 3
-truncate_to_repo = false
 truncation_symbol = "../"
-style = "lavender"
 
-[cmd_duration]
-min_time = 1000
-show_milliseconds = false
-disabled = false
-style = "italic red"
-format = "took [$duration]($style)"
+[directory.substitutions]
+"Documents" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
-[aws]
-symbol = "  "
+[c]
+symbol = " "
+style = "bg:#4c566a"
+format = '[ $symbol ($version) ]($style)'
 
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
+[python]
+symbol = " "
+style = "bg:#4c566a"
+format = '[ $symbol ($version) ($virtualenv) ]($style)'
+pyenv_prefix = "venv "
+detect_extensions = ["py"]
 
 [docker_context]
 symbol = " "
-format = "via [$symbol$context]($style) "
-style = "blue bold"
-only_with_files = true
-detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
-detect_folders = []
-disabled = false
+style = "bg:#5e81ac"
+format = '[ $symbol $context ]($style) $path'
 
 [elixir]
 symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
-disabled = false
-style = "mauve"
-symbol = " "
+symbol = ""
+style = "bg:#434c5e"
+format = '[ $symbol $branch ]($style)'
 
 [git_status]
-disabled = false
-format = '([\[$all_status$ahead_behind\]]($style) )'
-stashed = "[${count}*](green)" 
-modified = "[${count}+](yellow)" 
-deleted =  "[${count}-](red)" 
-conflicted =  "[${count}~](red)" 
-ahead = "⇡${count}"
-behind = "⇣${count}"
-untracked = "[${count}?](blue)" 
-staged = "[${count}+](green)" 
-
-[git_state]
-disabled = false
-style =	"red"
-format = "[$state( $progress_current/$progress_total) ]($style)"
-rebase = "rebase"
-merge = "merge"	
-revert = "revert"	
-cherry_pick = "cherry"
-bisect = "bisect"	
-am = "am"	
-am_or_rebase = "am/rebase"
+style = "bg:#434c5e"
+format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
-[hg_branch]
-symbol = " "
+[haskell]
+symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
-[haskell]
-symbol = "λ "
-
-[memory_usage]
-symbol = " "
+[nodejs]
+symbol = ""
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[package]
-symbol = " "
-style = "flamingo"
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
-style = "yellow"
-pyenv_prefix = "venv "
-python_binary = ["./venv/bin/python", "python", "python3", "python2"]
-detect_extensions = ["py"]
-version_format = "v${raw}"
-
-[ruby]
-symbol = " "
+style = "bg:##434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [rust]
-symbol = " "
+symbol = ""
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
+style = "bg:#434c5e"
+format = '[ $symbol ($version) ]($style)'
 
-[shlvl]
-symbol = " "
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#636d82"
+format = '[  $time ]($style)'
+	
+[character]
+success_symbol = '[➜](#4c566a) '
+error_symbol = '[➜](bold red) '
 
-[swift]
-symbol = "ﯣ "
-
-[nodejs]
-format = "via [ Node.js $version](green) "
-detect_files = ["package.json", ".node-version"]
-detect_folders = ["node_modules"]
-
+[cmd_duration]
+min_time = 500
+format = ' [$duration](#6272a4)'
