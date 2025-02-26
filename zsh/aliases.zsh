@@ -24,6 +24,6 @@ if command -v bat &> /dev/null; then
 fi
 
 if command -v eza &> /dev/null; then
-  alias ls=eza
+  alias ls="eza --group"
 fi
 
