@@ -18,6 +18,12 @@ if command -v nvim &> /dev/null; then
   alias vim="nvim"
 fi
 
-alias cat="bat --theme \"ansi\"" 
-alias catp="bat -p --theme \"ansi\"" 
+if command -v bat &> /dev/null; then
+  alias cat="bat --theme \"ansi\"" 
+  alias catp="bat -p --theme \"ansi\"" 
+fi
+
+if command -v eza &> /dev/null; then
+  alias ls=eza
+fi
 
