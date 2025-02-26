@@ -27,3 +27,6 @@ if command -v eza &> /dev/null; then
   alias ls="eza --group"
 fi
 
+if command -v fzf &> /dev/null; then
+  alias fz="fzf --preview \"bat --style=numbers --color=always --theme=ansi {}\""
+fi
