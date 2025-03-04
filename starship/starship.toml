@@ -1,8 +1,8 @@
 format = """
-[░▒▓](#2e3440)\
+[░▒▓](#853956)\
 $os\
 $hostname\
-[](bg:#3b4252 fg:#2e3440)\
+[](bg:#3b4252 fg:#8d4c65)\
 $directory\
 [](fg:#3b4252 bg:#434c5e)\
 $git_branch\
@@ -31,7 +31,7 @@ $character\
 disabled = true
 
 [hostname]
-style = "bg:#2e3440"
+style = "bg:#8d4c65"
 ssh_only = false
 format = '[ $hostname ]($style)'
 disabled = false
