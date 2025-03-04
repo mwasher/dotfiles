@@ -4,7 +4,7 @@ vim.opt.history = 1000
 vim.opt.startofline = true                -- move cursor to start of line for ^F, ^B, etc.
 
 vim.opt.scrolloff = 3                     -- pad a few lines after cursor
-vim.opt.laststatus = 2                    -- always display status bar 
+vim.opt.laststatus = 3                    -- always display status bar and pane divider
 vim.opt.modelines = 0                     -- do not inspect file for vim options
 vim.opt.timeoutlen = 500                  -- longer delay for multikey mappings
 
