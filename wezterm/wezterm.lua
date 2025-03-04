@@ -16,9 +16,9 @@ local config = {
 
   window_decorations = "RESIZE",
   window_padding = {
-    left = 10,
+    left = 5,
     right = 0,
-    top = 5,
+    top = 0,
     bottom = 0,
   },
   window_frame = {
