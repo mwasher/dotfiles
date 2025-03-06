@@ -6,7 +6,7 @@ function plugin.config()
   require('neoscroll').setup({
     mappings = {                 -- Keys to be mapped to their corresponding default scrolling animation
       '<C-u>', '<C-d>',
-      'zt', 'zz', 'zb',
+      '<C-b>', '<C-f>',
     },
     hide_cursor = true,          -- Hide cursor while scrolling
     stop_eof = true,             -- Stop at <EOF> when scrolling downwards

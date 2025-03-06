@@ -18,8 +18,8 @@ local function xmap_key(shortcut, command)
   map_key('x', shortcut, command)
 end
 
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = ','
+vim.g.maplocalleader = ','
 
 imap_key('jk', '<ESC>')                           -- rebind normal mode escape
 
