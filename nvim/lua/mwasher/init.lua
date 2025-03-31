@@ -9,7 +9,7 @@ local function load_plugin(item)
 end
 
 if vim.g.vscode then
-
+  load_plugin('mwasher.plugins.comment')
 else
   load_plugin('mwasher.plugins.colorscheme')
   load_plugin('mwasher.plugins.plenary')
