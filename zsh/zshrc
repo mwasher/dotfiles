@@ -72,6 +72,11 @@ bindkey '^ ' autosuggest-accept
 # Load the plugins
 plugin-load $plugins
 
+# Disable underlines of zsh paths in command input
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+
 # Source FZF and install for ZSH
 fzf_path="$HOME/.local/share/fzf"
 if [[ ! -d $fzf_path ]]; then
