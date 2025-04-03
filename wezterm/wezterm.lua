@@ -34,6 +34,7 @@ local config = {
   leader = { key = 'Space', mods = 'ALT', timeout_milliseconds = 500 },
 
   keys = {
+    { key = 'v', mods = 'CTRL', action = wezterm.action.Nop },   -- disable to fix pasting issues
     { key = 'n', mods = 'ALT', action = act.ShowLauncher, },
     { key = 'v', mods = 'ALT|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
     { key = 's', mods = 'ALT|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' }, },
