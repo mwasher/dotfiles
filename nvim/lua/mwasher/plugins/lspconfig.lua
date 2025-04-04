@@ -32,6 +32,8 @@ function plugin.config()
   local icons = require('mwasher.icons')
 
   local servers = {
+    'gopls',
+    'yamlls',
     'lua_ls',
     'jsonls',
     'pyright',
@@ -40,11 +42,11 @@ function plugin.config()
   local default_diagnostic_config = {
     signs = {
       active = true,
-      values = {
-        { name = 'DiagnosticSignError', text = icons.diagnostics.Error },
-        { name = 'DiagnosticSignWarn', text = icons.diagnostics.Warning },
-        { name = 'DiagnosticSignHint', text = icons.diagnostics.Hint },
-        { name = 'DiagnosticSignInfo', text = icons.diagnostics.Information },
+      text = {
+        [vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
+        [vim.diagnostic.severity.WARN] = icons.diagnostics.Warning,
+        [vim.diagnostic.severity.INFO] = icons.diagnostics.Information,
+        [vim.diagnostic.severity.HINT] = icons.diagnostics.Hint,
       },
     },
     virtual_text = false,
@@ -71,10 +73,6 @@ function plugin.config()
     vim.lsp.handlers.signature_help,
     { border = 'rounded' }
   )
-
-  for _, sign in ipairs(vim.tbl_get(vim.diagnostic.config(), 'signs', 'values') or {}) do
-    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
-  end
 
   for _, server in pairs(servers) do
     local opts = {
