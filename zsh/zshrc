@@ -113,5 +113,9 @@ else
   fi
 fi
 
+# Source kubectl auto completion
+if command -v kubectl &> /dev/null; then
+  source <(kubectl completion zsh)
+fi
 
 . "$HOME/.local/share/../bin/env"
