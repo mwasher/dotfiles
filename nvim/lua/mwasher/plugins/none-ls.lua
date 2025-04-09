@@ -16,7 +16,7 @@ function plugin.config()
           '--max-line-length=120',
         }
       }
-   },
+    }
   }
 end
 
