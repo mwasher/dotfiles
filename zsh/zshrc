@@ -113,15 +113,12 @@ else
   fi
 fi
 
-<<<<<<< HEAD
 # Source kubectl auto completion
 if command -v kubectl &> /dev/null; then
   source <(kubectl completion zsh)
 fi
 
-=======
 # uv environment
->>>>>>> 46595c4 (Fix completions)
 . "$HOME/.local/share/../bin/env"
 
 # Enable completions
