@@ -66,6 +66,10 @@ function zvm_config() {
   ZVM_INIT_MODE=sourcing
 }
 
+# Enable completions
+autoload -Uz compinit
+compinit -i
+
 # Set auto suggest completion to ctrl-space
 bindkey '^ ' autosuggest-accept
 
@@ -119,9 +123,7 @@ if command -v kubectl &> /dev/null; then
 fi
 
 # uv environment
-. "$HOME/.local/share/../bin/env"
-
-# Enable completions
-autoload -Uz compinit
-compinit -i
+if command -v uv &> /dev/null; then
+  . "$HOME/.local/share/../bin/env"
+fi
 
