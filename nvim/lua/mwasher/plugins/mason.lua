@@ -11,6 +11,10 @@ function plugin.config()
 
   require('mason-lspconfig').setup({
     ensure_installed = {
+      'pyright',
+      'jsonls',
+      'lua_ls',
+      'gopls',
     }
   })
 end

@@ -33,7 +33,6 @@ function plugin.config()
 
   local servers = {
     'gopls',
-    'yamlls',
     'lua_ls',
     'jsonls',
     'pyright',

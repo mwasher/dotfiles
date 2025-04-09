@@ -28,7 +28,6 @@ else
   load_plugin('mwasher.plugins.none-ls')
   load_plugin('mwasher.plugins.mason-null-ls')
   load_plugin('mwasher.plugins.neoscroll')
-  load_plugin('mwasher.plugins.venv-selector')
 end
 
 require('mwasher.lazy')
