@@ -1,7 +1,5 @@
 unsetopt BEEP
 
-unset zle_bracketed_paste
-
 # Platform specific
 case "$(uname -s)" in
   Linux)
