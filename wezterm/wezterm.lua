@@ -1,7 +1,5 @@
 local wezterm = require("wezterm")
 
-local config = wezterm.config_builder()
-
 local act = wezterm.action
 
 local config = {
@@ -11,45 +9,47 @@ local config = {
   audible_bell = "Disabled",
 
   font = wezterm.font("Iosevka Nerd Font Mono"),
-  font_size = 10,
-  line_height = 1.0,
+  font_size = 12,
 
   window_decorations = "RESIZE",
   window_padding = {
     left = 5,
     right = 0,
-    top = 0,
+    top = 5,
     bottom = 0,
   },
   window_frame = {
-    font = wezterm.font { family = 'MesloLGS Nerd Font Mono', weight = 'Bold' },
+    font = wezterm.font { family = 'Iosevka Nerd Font Mono', weight = 'Bold' },
     font_size = 10,
   },
 
-  enable_tab_bar = true,
-  hide_tab_bar_if_only_one_tab = true,
-  tab_bar_at_bottom = false,
+  enable_tab_bar = false,
+  hide_tab_bar_if_only_one_tab = false,
+  tab_bar_at_bottom = true,
   use_fancy_tab_bar = true,
 
-  leader = { key = 'Space', mods = 'ALT', timeout_milliseconds = 500 },
+  leader = { key = 'a', mods = 'ALT', timeout_milliseconds = 500 },
 
   keys = {
-    { key = 'n', mods = 'ALT', action = act.ShowLauncher },
-    { key = 'v', mods = 'ALT|SHIFT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-    { key = 's', mods = 'ALT|SHIFT', action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
-    { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left' },
-    { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right' },
-    { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up' },
-    { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down' },
-    { key = 'H', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Left', 5 } },
-    { key = 'J', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Down', 5 } },
-    { key = 'K', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Up', 5 } },
-    { key = 'L', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Right', 5 } },
-    { key = 'Z', mods = 'ALT|SHIFT', action = wezterm.action.TogglePaneZoomState },
-    { key = 'F', mods = 'ALT|SHIFT', action = wezterm.action.ToggleFullScreen },
+    { key = 'v', mods = 'CTRL', action = act.Nop, },
+    { key = 'n', mods = 'ALT', action = act.ShowLauncher, },
+    { key = 'c', mods = 'CTRL|SHIFT', action = wezterm.action.CopyTo('Clipboard'), },
+    { key = 'v', mods = 'CTRL|SHIFT', action = wezterm.action.PasteFrom('Clipboard'), },
+    { key = 'v', mods = 'ALT', action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }, },
+    { key = 's', mods = 'ALT', action = act.SplitVertical { domain = 'CurrentPaneDomain' }, },
+    { key = 'h', mods = 'ALT', action = act.ActivatePaneDirection 'Left', },
+    { key = 'l', mods = 'ALT', action = act.ActivatePaneDirection 'Right', },
+    { key = 'k', mods = 'ALT', action = act.ActivatePaneDirection 'Up', },
+    { key = 'j', mods = 'ALT', action = act.ActivatePaneDirection 'Down', },
+    { key = 'H', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Left', 5 }, },
+    { key = 'J', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Down', 5 }, },
+    { key = 'K', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Up', 5 }, },
+    { key = 'L', mods = 'ALT|SHIFT', action = act.AdjustPaneSize { 'Right', 5 }, },
+    { key = 'z', mods = 'LEADER', action = wezterm.action.TogglePaneZoomState, },
+    { key = 'f', mods = 'LEADER', action = wezterm.action.ToggleFullScreen, },
   },
 
-  color_scheme = 'oldworld',
+  color_scheme = 'oldworld oled',
 
   color_schemes = {
     ['oldworld'] = {
@@ -122,3 +122,4 @@ local config = {
 }
 
 return config
+
