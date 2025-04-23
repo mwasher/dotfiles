@@ -1,3 +1,4 @@
 .zhistory
+.zcompdump
 zsh/plugins
 deploy.log
