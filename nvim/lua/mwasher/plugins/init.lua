@@ -1,0 +1,17 @@
+require("mwasher.plugins.lazy")
+
+require("lazy").setup({
+
+	require("mwasher.plugins.specs.which-key"),
+	require("mwasher.plugins.specs.todo-comments"),
+	require("mwasher.plugins.specs.mini"),
+	require("mwasher.plugins.specs.snacks"),
+	-- require("mwasher.plugins.specs.telescope"),
+	require("mwasher.plugins.specs.cmp"),
+	require("mwasher.plugins.specs.lspconfig"),
+	require("mwasher.plugins.specs.conform"),
+	require("mwasher.plugins.specs.treesitter"),
+	require("mwasher.plugins.specs.autopairs"),
+	require("mwasher.plugins.specs.sunglasses"),
+	require("mwasher.plugins.specs.nordic"),
+})
