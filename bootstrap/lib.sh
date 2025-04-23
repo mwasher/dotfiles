@@ -4,15 +4,15 @@ C_YELLOW="\033[0;33m"
 C_RESET="\033[0m"
 
 pinfo() {
-  echo "${C_GREEN}$1${C_RESET}"
+  echo -e "${C_GREEN}$1${C_RESET}"
 }
 
 pwarn() {
-  echo "${C_YELLOW}$1${C_RESET}"
+  echo -e "${C_YELLOW}$1${C_RESET}"
 }
 
 perror() {
-  echo "${C_RED}$1${C_RESET}"
+  echo -e "${C_RED}$1${C_RESET}"
 }
 
 sudo_init() {

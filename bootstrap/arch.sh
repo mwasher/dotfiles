@@ -3,7 +3,7 @@ source "bootstrap/installers.sh"
 
 pinfo ">> Deploying for user '$(whoami)' on dist Arch Linux"
 
-local arch="arch"
+arch="arch"
 
 deps=(
   neovim

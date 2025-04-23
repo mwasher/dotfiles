@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 mkdir -p $HOME/.config
 mkdir -p $HOME/.local
 mkdir -p $HOME/.cache
