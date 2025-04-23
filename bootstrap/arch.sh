@@ -1,32 +1,25 @@
-pinfo ">> Deploying for dist: Arch Linux"
+source "bootstrap/lib.sh"
+source "bootstrap/installers.sh"
 
-pinfo ">> Installing depdencies"
-sudo_cmd pacman -S --noconfirm neovim ripgrep eza bat fd
+pinfo ">> Deploying for user '$(whoami)' on dist Arch Linux"
 
-pinfo ">> Installing zsh"
-sudo_cmd pacman -S --noconfirm zsh
+local arch="arch"
 
-pinfo ">> Setting login shell"
-sudo_cmd chsh -s $(which zsh) $(whoami)
+deps=(
+  neovim
+  ripgrep
+  eza
+  bat
+  fd
+  uv
+)
 
-pinfo ">> Linking dotfiles:"
+ pinfo ">> Installing depdencies"
+ for dep in "${deps[@]}"; do
+  install_$dep
+ done
 
-pinfo "  >> zsh"
-ln -sf "${dotRoot}/zsh" ~/.config/zsh
-ln -sf "${dotRoot}/zsh/.zshenv" ~/.zshenv
+install_zsh
 
-pinfo "  >> neovim"
-ln -sf "${dotRoot}/nvim" ~/.config/nvim
+install_dotfiles
 
-pinfo "  >> eza"
-ln -sf "${dotRoot}/eza" ~/.config/eza
-
-pinfo "  >> wezterm"
-ln -sf "${dotRoot}/wezterm" ~/.config/wezterm
-
-pinfo "  >> hushlogin"
-touch ~/.hushlogin
-
-pinfo "Setup complete."
-
-# TODO Install deps: uv

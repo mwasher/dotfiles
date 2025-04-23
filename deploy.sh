@@ -6,6 +6,7 @@ mkdir -p $HOME/.cache
 
 cd "$(dirname $0)"
 dotRoot=$(pwd -P)
+logFile="${dotRoot}/deploy.log"
 
 source "bootstrap/lib.sh"
 
