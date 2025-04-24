@@ -109,7 +109,9 @@ if command -v kubectl &> /dev/null; then
   source <(kubectl completion zsh)
 fi
 
-# uv env
+# uv completions
 if command -v uv &> /dev/null; then
-  . "$HOME/.local/share/../bin/env"
+  eval "$(uv generate-shell-completion zsh)"
 fi
+
+. "$HOME/.local/share/../bin/env"

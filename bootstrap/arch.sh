@@ -5,21 +5,11 @@ pinfo ">> Deploying for user '$(whoami)' on dist Arch Linux"
 
 arch="arch"
 
-deps=(
-  neovim
-  ripgrep
-  eza
-  bat
-  fd
-  uv
-)
-
- pinfo ">> Installing depdencies"
- for dep in "${deps[@]}"; do
+pinfo ">> Installing common dependencies:"
+for dep in "${commonDeps[@]}"; do
   install_$dep
- done
+done
 
 install_zsh
 
 install_dotfiles
-

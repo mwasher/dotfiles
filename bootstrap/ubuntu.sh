@@ -1,32 +1,15 @@
-pinfo ">> Deploying for dist: Ubuntu Linux"
+source "bootstrap/lib.sh"
+source "bootstrap/installers.sh"
 
-pinfo ">> Installing depdencies"
-# sudo_cmd pacman -S --noconfirm neovim ripgrep eza bat fd
+pinfo ">> Deploying for user '$(whoami)' on dist Ubuntu Linux"
 
-pinfo ">> Installing zsh"
-# sudo_cmd pacman -S --noconfirm zsh
+arch="ubuntu"
 
-pinfo ">> Setting login shell"
-# sudo_cmd chsh -s $(which zsh) $(whoami)
+pinfo ">> Installing common dependencies:"
+for dep in "${commonDeps[@]}"; do
+  install_$dep
+done
 
-pinfo ">> Linking dotfiles:"
+install_zsh
 
-pinfo "  >> zsh"
-ln -sf "${dotRoot}/zsh" ~/.config/zsh
-ln -sf "${dotRoot}/zsh/.zshenv" ~/.zshenv
-
-pinfo "  >> neovim"
-ln -sf "${dotRoot}/nvim" ~/.config/nvim
-
-pinfo "  >> eza"
-ln -sf "${dotRoot}/eza" ~/.config/eza
-
-pinfo "  >> wezterm"
-ln -sf "${dotRoot}/wezterm" ~/.config/wezterm
-
-pinfo "  >> hushlogin"
-touch ~/.hushlogin
-
-pinfo "Setup complete."
-
-# TODO Install deps: uv
+install_dotfiles

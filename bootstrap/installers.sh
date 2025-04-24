@@ -6,12 +6,16 @@ install_neovim() {
       sudo_cmd pacman -S --noconfirm --noprogressbar neovim
       ;;
     ubuntu)
+      user_cmd curl -o $HOME/.local/bin/nvim -L https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+      user_cmd chmod +x $HOME/.local/bin/nvim 
       ;;
     redhat)
       ;;
     macos)
       ;;
   esac
+
+  verify_install "neovim" "nvim" $?
 }
 
 install_ripgrep() {
@@ -22,12 +26,15 @@ install_ripgrep() {
       sudo_cmd pacman -S --noconfirm --noprogressbar ripgrep
       ;;
     ubuntu)
+      sudo_cmd apt install -y ripgrep
       ;;
     redhat)
       ;;
     macos)
       ;;
   esac
+
+  verify_install "ripgrep" "rg" $?
 }
 
 install_eza() {
@@ -38,12 +45,17 @@ install_eza() {
       sudo_cmd pacman -S --noconfirm --noprogressbar eza
       ;;
     ubuntu)
+      user_cmd curl -o /tmp/eza.tar.gz -L https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz
+      user_cmd tar -C $HOME/.local/bin -xzf /tmp/eza.tar.gz
+      user_cmd rm -f /tmp/eza.tar.gz
       ;;
     redhat)
       ;;
     macos)
       ;;
   esac
+
+  verify_install "eza" "eza" $?
 }
 
 install_bat() {
@@ -54,12 +66,15 @@ install_bat() {
       sudo_cmd pacman -S --noconfirm --noprogressbar bat
       ;;
     ubuntu)
+      sudo_cmd apt install -y bat
       ;;
     redhat)
       ;;
     macos)
       ;;
   esac
+
+  verify_install "bat" "bat" $?
 }
 
 install_fd() {
@@ -70,12 +85,16 @@ install_fd() {
       sudo_cmd pacman -S --noconfirm --noprogressbar fd
       ;;
     ubuntu)
+      sudo_cmd apt install -y fd-find
+      sudo_cmd ln -sf $(which fdfind) /usr/bin/fd
       ;;
     redhat)
       ;;
     macos)
       ;;
   esac
+
+  verify_install "fd" "fd" $?
 }
 
 install_uv() {
@@ -86,6 +105,7 @@ install_uv() {
       user_cmd "curl -LsSf https://astral.sh/uv/install.sh | sh"
       ;;
     ubuntu)
+      user_cmd "curl -LsSf https://astral.sh/uv/install.sh | sh"
       ;;
     redhat)
       ;;
@@ -104,6 +124,7 @@ install_zsh() {
       sudo_cmd pacman -S --noconfirm --noprogressbar zsh
       ;;
     ubuntu)
+      sudo_cmd apt install -y zsh
       ;;
     redhat)
       ;;
@@ -136,17 +157,17 @@ install_dotfiles() {
   pinfo ">> Linking dotfiles:"
 
   pinfo "  >> zsh"
-  ln -sf "${dotRoot}/zsh" ~/.config/zsh
-  ln -sf "${dotRoot}/zsh/.zshenv" ~/.zshenv
+  ln -snf "${dotRoot}/zsh" ~/.config/zsh
+  ln -snf "${dotRoot}/zsh/.zshenv" ~/.zshenv
 
   pinfo "  >> neovim"
-  ln -sf "${dotRoot}/nvim" ~/.config/nvim
+  ln -snf "${dotRoot}/nvim" ~/.config/nvim
 
   pinfo "  >> eza"
-  ln -sf "${dotRoot}/eza" ~/.config/eza
+  ln -snf "${dotRoot}/eza" ~/.config/eza
 
   pinfo "  >> wezterm"
-  ln -sf "${dotRoot}/wezterm" ~/.config/wezterm
+  ln -snf "${dotRoot}/wezterm" ~/.config/wezterm
 
   pinfo "  >> hushlogin"
   touch ~/.hushlogin
