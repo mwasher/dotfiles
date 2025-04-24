@@ -87,6 +87,14 @@ config.keys = {
 
 config.color_scheme = "nord"
 
+config.colors = {
+	cursor_bg = "#bf616a",
+	cursor_fg = "#000000",
+
+	selection_fg = "#000000",
+	selection_bg = "#b1c89d",
+}
+
 config.window_background_opacity = 0.98
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"

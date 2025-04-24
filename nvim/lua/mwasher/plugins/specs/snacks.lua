@@ -11,6 +11,9 @@ return {
 
 	opts = {
 		picker = {
+			layout = {
+				preset = "ivy",
+			},
 			sources = {
 				explorer = {
 					layout = { layout = { position = "right" } },
@@ -21,7 +24,7 @@ return {
 		scroll = {
 			enabled = true,
 			animate = {
-				duration = 10,
+				duration = 5,
 				easing = "inOutQuad",
 				fps = 60,
 			},
@@ -192,13 +195,6 @@ return {
 				Snacks.picker.registers()
 			end,
 			desc = "Registers",
-		},
-		{
-			"<leader>s/",
-			function()
-				Snacks.picker.search_history()
-			end,
-			desc = "Search History",
 		},
 		{
 			"<leader>sa",

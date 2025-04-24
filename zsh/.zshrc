@@ -32,7 +32,7 @@ mkdir -p $HOME/.local/bin
 
 # Configure the zsh prompt
 setopt prompt_subst
-PROMPT='%F{blue}┏╸%f%F{green}%n@%m %2d%f$(git_current_branch)'
+PROMPT='%F{blue}┏╸%n@%m %2d%f$(git_current_branch)'
 PROMPT+=$'\n'
 PROMPT+='%F{blue}┗► %f'
 
