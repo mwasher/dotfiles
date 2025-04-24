@@ -1,14 +1,5 @@
 #!/usr/bin/bash
 
-commonDeps=(
-  neovim
-  ripgrep
-  eza
-  bat
-  fd
-  uv
-)
-
 source "bootstrap/lib.sh"
 
 export PATH="${HOME}/.local/bin:${PATH}"
@@ -36,7 +27,7 @@ else
   exit 1
 fi
 
-pinfo "\nSuccess. Starting zsh...\n"
+ptask "\n>> Success. Starting zsh...\n"
 
 exec zsh
 

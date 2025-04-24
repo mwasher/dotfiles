@@ -117,7 +117,7 @@ install_uv() {
 }
 
 install_zsh() {
-  pinfo ">> Installing zsh"
+  ptask ">> Installing zsh"
 
   case $arch in
     arch)
@@ -134,7 +134,7 @@ install_zsh() {
 
   verify_install "zsh" "zsh" $?
 
-  pinfo ">> Setting login shell"
+  ptask ">> Setting login shell"
   sudo_cmd chsh -s $(which zsh) $(whoami)
 }
 
@@ -154,7 +154,7 @@ verify_install() {
 }
 
 install_dotfiles() {
-  pinfo ">> Linking dotfiles:"
+  ptask ">> Linking dotfiles:"
 
   pinfo "  >> zsh"
   ln -snf "${dotRoot}/zsh" ~/.config/zsh

@@ -1,11 +1,11 @@
-source "bootstrap/lib.sh"
+source "bootstrap/deps.sh"
 source "bootstrap/installers.sh"
 
-pinfo ">> Deploying for user '$(whoami)' on dist Ubuntu Linux"
+ptask "\n>> Deploying for user '$(whoami)' on dist Ubuntu Linux\n"
 
 arch="ubuntu"
 
-pinfo ">> Installing common dependencies:"
+ptask ">> Installing common dependencies:"
 for dep in "${commonDeps[@]}"; do
   install_$dep
 done
