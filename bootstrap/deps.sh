@@ -1,5 +1,7 @@
 commonDeps=(
   neovim
+  git
+  gcc
   ripgrep
   eza
   bat

@@ -18,6 +18,43 @@ install_neovim() {
   verify_install "neovim" "nvim" $?
 }
 
+install_git() {
+  pinfo "  >> git"
+
+  case $arch in
+    arch)
+      sudo_cmd pacman -S --noconfirm --noprogressbar git
+      ;;
+    ubuntu)
+      sudo_cmd apt install -y git
+      ;;
+    redhat)
+      ;;
+    macos)
+      ;;
+  esac
+
+  verify_install "git" "git" $?
+}
+
+install_gcc() {
+  pinfo "  >> gcc"
+
+  case $arch in
+    arch)
+      sudo_cmd pacman -S --noconfirm --noprogressbar gcc
+      ;;
+    ubuntu)
+      sudo_cmd apt install -y gcc
+      ;;
+    redhat)
+      ;;
+    macos)
+      ;;
+  esac
+
+  verify_install "gcc" "gcc" $?
+}
 install_ripgrep() {
   pinfo "  >> ripgrep"
 

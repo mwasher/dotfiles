@@ -14,8 +14,5 @@ return {
 
 		-- Smarter commenting with text object (gc)
 		require("mini.comment").setup()
-
-		-- Icons
-		require("mini.icons").setup()
 	end,
 }

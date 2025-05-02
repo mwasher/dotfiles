@@ -39,7 +39,7 @@ config.adjust_window_size_when_changing_font_size = false
 
 config.audible_bell = "Disabled"
 
-config.font = wezterm.font("Iosevka Nerd Font Mono")
+config.font = wezterm.font("Iosevka Nerd Font")
 config.font_size = 12
 
 config.enable_tab_bar = true
@@ -57,11 +57,11 @@ config.window_padding = {
 }
 
 config.window_frame = {
-	font = wezterm.font({ family = "Iosevka Nerd Font Mono", weight = "Bold" }),
+	font = wezterm.font({ family = "Iosevka Nerd Font", weight = "Bold" }),
 	font_size = 10,
 
-	active_titlebar_bg = "#252933",
-	inactive_titlebar_bg = "#252933",
+	active_titlebar_bg = "#242933",
+	inactive_titlebar_bg = "#242933",
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
@@ -107,8 +107,8 @@ config.window_background_gradient = {
 	blend = "Rgb",
 
 	colors = {
-		"#252933",
-		"#17191f",
+		"#242933",
+		"#191d24",
 		"#000000",
 	},
 }

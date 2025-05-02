@@ -1,9 +1,6 @@
 -- Picker and other assorted finders
 -- https://github.com/folke/snacks.nvim
 
--- Hide unknown global 'Snacks' diagnostic message
----@module "snacks"
-
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
@@ -20,7 +17,18 @@ return {
 				},
 			},
 		},
-		notifier = { enabled = true, timeout = 3000 },
+		notifier = {
+			enabled = true,
+			timeout = 5000,
+			style = "fancy",
+			icons = {
+				error = " ",
+				warn = " ",
+				info = " ",
+				debug = " ",
+				trace = " ",
+			},
+		},
 		scroll = {
 			enabled = true,
 			animate = {
@@ -370,7 +378,6 @@ return {
 		},
 
 		-- Git
-		-- TODO: test these
 		{
 			"<leader>sgb",
 			function()

@@ -11,7 +11,8 @@ for option, value in pairs({
 	-- Highlight line number we are on
 	cursorline = true,
 
-	-- Always show status bar and pane divider
+	-- Hide cmd bar, always show status bar and pane divider
+	cmdheight = 0,
 	laststatus = 3,
 
 	-- Dissable support for modelines

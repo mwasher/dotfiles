@@ -18,7 +18,8 @@ local n_mappings = {
 	{ "<leader>o", ":tabnew<CR>", "New tab", silent = true },
 	{ "<leader>i", ":tabprev<CR>", "Previous tab", silent = true },
 	{ "<leader>p", ":tabnext<CR>", "Next tab", silent = true },
-	{ "<leader>q", vim.diagnostic.setloclist, "Open diagnostic [Q]uickfix list" },
+	{ "<leader>q", vim.diagnostic.setloclist, "Diagnostic [Q]uickfix list" },
+	{ "<leader>gl", vim.diagnostic.open_float, "Diagnostic float" },
 }
 
 -- Mappings for insert mode
