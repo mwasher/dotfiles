@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local myFont = "JetBrainsMono Nerd Font"
+
 local act = wezterm.action
 
 function tab_title(tab_info)
@@ -16,7 +18,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
-			{ Background = { Color = "#252933" } },
+			{ Background = { Color = "#242933" } },
 			{ Text = " " .. title .. " " },
 		}
 	else
@@ -39,7 +41,7 @@ config.adjust_window_size_when_changing_font_size = false
 
 config.audible_bell = "Disabled"
 
-config.font = wezterm.font("Iosevka Nerd Font")
+config.font = wezterm.font(myFont)
 config.font_size = 12
 
 config.enable_tab_bar = true
@@ -57,7 +59,7 @@ config.window_padding = {
 }
 
 config.window_frame = {
-	font = wezterm.font({ family = "Iosevka Nerd Font", weight = "Bold" }),
+	font = wezterm.font({ family = myFont, weight = "Bold" }),
 	font_size = 10,
 
 	active_titlebar_bg = "#242933",
@@ -67,7 +69,6 @@ config.window_frame = {
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
 
 config.keys = {
-	{ key = "v", mods = "CTRL", action = act.Nop },
 	{ key = "n", mods = "ALT", action = act.ShowLauncher },
 	{ key = "c", mods = "CTRL|SHIFT", action = act.CopyTo("Clipboard") },
 	{ key = "v", mods = "CTRL|SHIFT", action = act.PasteFrom("Clipboard") },
