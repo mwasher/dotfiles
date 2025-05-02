@@ -9,6 +9,10 @@ commonDeps=(
   uv
 )
 
+optionalDeps=(
+  go
+)
+
 archDeps=()
 
 ubuntuDeps=()

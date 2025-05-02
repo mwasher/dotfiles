@@ -1,6 +1,7 @@
 local servers = {
 	"lua-language-server",
 	"basedpyright",
+	"gopls",
 }
 
 vim.diagnostic.config({

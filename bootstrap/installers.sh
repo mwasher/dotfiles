@@ -55,6 +55,25 @@ install_gcc() {
 
   verify_install "gcc" "gcc" $?
 }
+
+install_go() {
+  pinfo "  >> go"
+
+  case $arch in
+    arch)
+      sudo_cmd pacman -S --noconfirm --noprogressbar go
+      ;;
+    ubuntu)
+      ;;
+    redhat)
+      ;;
+    macos)
+      ;;
+  esac
+
+  verify_install "go" "go" $?
+}
+
 install_ripgrep() {
   pinfo "  >> ripgrep"
 
