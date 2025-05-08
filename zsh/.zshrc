@@ -30,11 +30,50 @@ esac
 # Create directory for local installed tools
 mkdir -p $HOME/.local/bin
 
-# Configure the zsh prompt
-setopt prompt_subst
-PROMPT='%F{blue}┏╸%n@%m %2d%f$(git_current_branch)'
-PROMPT+=$'\n'
-PROMPT+='%F{blue}┗► %f'
+# Prompt configuration
+setopt PROMPT_SUBST
+
+function __git_prompt () {
+    local ref
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref=$(git rev-parse --short HEAD 2> /dev/null) || return 0
+
+    local STATUS
+    local -a FLAGS
+
+    FLAGS=('--porcelain')
+
+    if [[ "${DISABLE_UNTRACKED_FILES_DIRTY:-}" == "true" ]]; then
+      FLAGS+='--untracked-files=no'
+    fi
+
+    case "${GIT_STATUS_IGNORE_SUBMODULES:-}" in
+      (git)  ;;
+      (*) FLAGS+="--ignore-submodules=${GIT_STATUS_IGNORE_SUBMODULES:-dirty}"  ;;
+    esac
+
+    STATUS=$(git status ${FLAGS} 2> /dev/null | tail -n1)
+
+    if [[ -n $STATUS ]]; then
+      echo "%F{red}[%F{yellow} ${ref#refs/heads/}%F{red}]%f "
+    else
+      echo "%F{green}(%F{yellow} ${ref#refs/heads/}%F{green})%f "
+    fi
+
+}
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+function __virtualenv_prompt {
+    if [[ -z "${VIRTUAL_ENV}" ]]; then
+      echo
+    else
+      echo "%F{green}${VIRTUAL_ENV:+[<U+E73C> ${VIRTUAL_ENV##*/}]}%f "
+    fi
+}
+
+PROMPT="%(?:%F{yellow}➤:%F{red}!%?)%f %F{blue}%m%f:%F{cyan}%~%f "
+PROMPT+="\$(__git_prompt)"
+PROMPT+="\$(__virtualenv_prompt)"
 
 # Fix keycodes
 bindkey -v
