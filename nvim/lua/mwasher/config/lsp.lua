@@ -25,7 +25,7 @@ vim.diagnostic.config({
 	severity_sort = true,
 	underline = false,
 	virtual_text = false,
-	virtual_lines = { severity = vim.diagnostic.severity.WARN, current_line = true },
+	virtual_lines = { severity = { min = vim.diagnostic.severity.WARN, current_line = true } },
 })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
