@@ -1,8 +1,5 @@
 -- Global init and require config modules
 
--- Some plugins have configuration based on using a nerd font
-vim.g.have_nerd_font = true
-
 -- Setup clipboard to work properly when using remote nvim
 if os.getenv("SSH_TTY") == nil then
 	vim.opt.clipboard:append("unnamedplus")

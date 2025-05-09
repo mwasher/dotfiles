@@ -14,5 +14,13 @@ return {
 
 		-- Smarter commenting with text object (gc)
 		require("mini.comment").setup()
+
+		-- Move text blocks in visual mode
+		require("mini.move").setup({
+			mappings = {
+				up = "K",
+				down = "J",
+			},
+		})
 	end,
 }

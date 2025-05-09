@@ -8,7 +8,7 @@ return {
 	opts = {
 		preset = "classic",
 		icons = {
-			mappings = vim.g.have_nerd_font,
+			mappings = true,
 		},
 		spec = {
 			{ "<leader>s", group = "[S]nacks" },

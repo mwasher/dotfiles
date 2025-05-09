@@ -19,7 +19,6 @@ local n_mappings = {
 	{ "<leader>i", ":tabprev<CR>", "Previous tab", silent = true },
 	{ "<leader>p", ":tabnext<CR>", "Next tab", silent = true },
 	{ "<leader>q", vim.diagnostic.setloclist, "Diagnostic [Q]uickfix list" },
-	{ "<leader>gl", vim.diagnostic.open_float, "Diagnostic float" },
 }
 
 -- Mappings for insert mode
@@ -39,8 +38,7 @@ local s_mappings = {}
 local v_mappings = {
 	{ "<", "<gv", "Indent" }, -- allow multiple block indents
 	{ ">", ">gv", "Outdent" }, -- allow multiple block outdents
-	{ "K", ":m '<-2<CR>gv=gv", "Move text block up", silent = true },
-	{ "J", ":m '>+1<CR>gv=gv", "Move text block down", silent = true },
+	-- text block movement managed by mini.move
 }
 
 -- Mappings for terminal
