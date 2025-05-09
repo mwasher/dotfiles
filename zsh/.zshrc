@@ -67,7 +67,7 @@ function __virtualenv_prompt {
     if [[ -z "${VIRTUAL_ENV}" ]]; then
       echo
     else
-      echo "%F{green}${VIRTUAL_ENV:+[<U+E73C> ${VIRTUAL_ENV##*/}]}%f "
+      echo "%F{green}${VIRTUAL_ENV:+[ ${VIRTUAL_ENV##*/}]}%f "
     fi
 }
 
