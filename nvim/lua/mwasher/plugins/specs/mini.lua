@@ -15,6 +15,9 @@ return {
 		-- Smarter commenting with text object (gc)
 		require("mini.comment").setup()
 
+		-- Bracket pairing
+		require("mini.pairs").setup()
+
 		-- Move text blocks in visual mode
 		require("mini.move").setup({
 			mappings = {

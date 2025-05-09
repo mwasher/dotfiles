@@ -20,7 +20,7 @@ return {
 		notifier = {
 			enabled = true,
 			timeout = 5000,
-			style = "fancy",
+			style = "compact",
 			icons = {
 				error = " ",
 				warn = " ",
