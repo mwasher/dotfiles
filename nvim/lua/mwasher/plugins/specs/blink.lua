@@ -2,6 +2,7 @@
 -- https://github.com/Saghen/blink.cmp
 
 return {
+
 	"saghen/blink.cmp",
 	depdendencies = {
 		"rafamadriz/friendly-snippets",
@@ -12,12 +13,10 @@ return {
 		keymap = {
 			preset = "default",
 		},
-
 		appearance = {
 			use_nvim_cmp_as_default = true,
 			nerd_font_variant = "normal",
 		},
-
 		completion = {
 			list = {
 				selection = {
@@ -29,12 +28,21 @@ return {
 					end,
 				},
 			},
+			menu = {
+				border = "rounded",
+				draw = {
+					treesitter = { "lsp" },
+				},
+			},
 			trigger = {
 				prefetch_on_insert = true,
 			},
 			documentation = {
+				window = {
+					border = "rounded",
+				},
 				auto_show = true,
-				auto_show_delay_ms = 150,
+				auto_show_delay_ms = 500,
 			},
 			accept = {
 				auto_brackets = {
@@ -42,7 +50,6 @@ return {
 				},
 			},
 		},
-
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
@@ -70,5 +77,8 @@ return {
 	init = function()
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 		vim.lsp.config("*", { capabilities = capabilities })
+
+		vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#be9db9" })
+		vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#be9db9" })
 	end,
 }
