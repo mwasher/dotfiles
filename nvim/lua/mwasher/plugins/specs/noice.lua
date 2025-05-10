@@ -6,6 +6,22 @@ return {
 	event = "VeryLazy",
 	dependencies = { "MunifTanjim/nui.nvim" },
 	opts = {
+		lsp = {
+			override = {
+				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+				["vim.lsp.util.stylize_markdown"] = true,
+				["cmp.entry.get_documentation"] = true,
+			},
+		},
+		views = {
+			cmdline_popup = {
+				win_options = {
+					winhighlight = {
+						FloatTitle = "Cows",
+					},
+				},
+			},
+		},
 		presets = {
 			bottom_search = true,
 			command_palette = false,
@@ -14,7 +30,7 @@ return {
 			lsp_doc_border = true,
 		},
 		cmdline = { enabled = true },
-		popupmenu = { enabled = true },
+		popupmenu = { enabled = true, backend = "cmp" },
 		messages = { enabled = false },
 		notify = { enbabled = false },
 	},

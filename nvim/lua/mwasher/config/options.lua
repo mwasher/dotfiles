@@ -13,7 +13,7 @@ for option, value in pairs({
 
 	-- Hide cmd bar, always show status bar and pane divider
 	cmdheight = 0,
-	laststatus = 3,
+	laststatus = 2,
 
 	-- Dissable support for modelines
 	modelines = 0,
@@ -85,6 +85,7 @@ for option, value in pairs({
 	confirm = true,
 
 	-- 24-bit color enabled
+	background = "dark",
 	termguicolors = true,
 }) do
 	vim.opt[option] = value

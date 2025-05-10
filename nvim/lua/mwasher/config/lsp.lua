@@ -1,3 +1,5 @@
+-- Native LSP configuration for Neovim 0.11+
+
 local servers = {
 	"lua-language-server",
 	"basedpyright",
@@ -52,6 +54,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		client.server_capabilities.semanticTokensProvider = nil
 
 		vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#be9db9" })
+		vim.api.nvim_set_hl(0, "Pmenu", { bg = "" })
 
 		local keymap = vim.keymap.set
 		local lsp = vim.lsp
@@ -73,7 +76,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opt("Go to implementation"))
 		keymap("n", "gr", lsp.buf.references, opt("Show References"))
 		keymap("n", "gl", vim.diagnostic.open_float, opt("Open diagnostic in float"))
-		keymap("n", "<C-k>", lsp.buf.signature_help, opts)
+		-- keymap("n", "<C-k>", lsp.buf.signature_help, opts)
 
 		pcall(vim.keymap.del, "n", "K", { buffer = args.buf })
 		keymap("n", "K", function()

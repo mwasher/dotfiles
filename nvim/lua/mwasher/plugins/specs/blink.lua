@@ -2,7 +2,6 @@
 -- https://github.com/Saghen/blink.cmp
 
 return {
-
 	"saghen/blink.cmp",
 	depdendencies = {
 		"rafamadriz/friendly-snippets",
@@ -56,9 +55,8 @@ return {
 		cmdline = {
 			enabled = true,
 			completion = {
-				menu = {
-					auto_show = false,
-				},
+				menu = { auto_show = true },
+				ghost_text = { enabled = false },
 			},
 			keymap = {
 				preset = "default",
@@ -78,7 +76,7 @@ return {
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 		vim.lsp.config("*", { capabilities = capabilities })
 
-		vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#be9db9" })
+		vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#be9db9", bg = "" })
 		vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#be9db9" })
 	end,
 }

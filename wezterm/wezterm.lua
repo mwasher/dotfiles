@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 
-local myFont = "JetBrainsMono Nerd Font"
+local myFont = "Iosevka NF"
 
 local act = wezterm.action
 
@@ -19,12 +19,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	if tab.is_active then
 		return {
 			{ Background = { Color = "#242933" } },
-			{ Text = " " .. title .. " " },
+			{ Text = "   " .. title .. "   " },
 		}
 	else
 		return {
-			{ Background = { Color = "#17191f" } },
-			{ Text = " " .. title .. " " },
+			{ Background = { Color = "#24273a" } },
+			{ Text = "   " .. title .. "   " },
 		}
 	end
 	return title
@@ -44,8 +44,10 @@ config.audible_bell = "Disabled"
 config.font = wezterm.font(myFont)
 config.font_size = 12
 
+config.harfbuzz_features = { "calt=0", "clig=0", "liga=0" }
+
 config.enable_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
@@ -86,17 +88,17 @@ config.keys = {
 	{ key = "f", mods = "LEADER", action = wezterm.action.ToggleFullScreen },
 }
 
-config.color_scheme = "nord"
+config.color_scheme = "Catppuccin Macchiato"
 
 config.colors = {
-	cursor_bg = "#bf616a",
-	cursor_fg = "#000000",
+	cursor_bg = "#ee99a0",
+	cursor_fg = "#181926",
 
-	selection_fg = "#000000",
-	selection_bg = "#b1c89d",
+	selection_fg = "#24273a",
+	selection_bg = "#b7bdf8",
 }
 
-config.window_background_opacity = 0.98
+config.window_background_opacity = 0.85
 
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
@@ -108,9 +110,9 @@ config.window_background_gradient = {
 	blend = "Rgb",
 
 	colors = {
-		"#242933",
-		"#191d24",
-		"#000000",
+		"#24273a",
+		"#1e2030",
+		"#1e2030",
 	},
 }
 
