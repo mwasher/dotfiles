@@ -13,7 +13,7 @@ for option, value in pairs({
 
 	-- Hide cmd bar, always show status bar and pane divider
 	cmdheight = 0,
-	laststatus = 2,
+	laststatus = 3,
 
 	-- Dissable support for modelines
 	modelines = 0,
