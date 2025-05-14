@@ -2,6 +2,7 @@
 
 local servers = {
 	"lua-language-server",
+	"yaml-language-server",
 	"basedpyright",
 	"gopls",
 }

@@ -5,8 +5,10 @@
 local default_packages = {
 	"lua-language-server",
 	"stylua",
+	"yaml-language-server",
 	"basedpyright",
 	"black",
+	"gopls",
 }
 
 return {
