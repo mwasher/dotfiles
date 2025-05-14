@@ -9,6 +9,7 @@ local default_packages = {
 	"basedpyright",
 	"black",
 	"gopls",
+	"gofumpt",
 }
 
 return {

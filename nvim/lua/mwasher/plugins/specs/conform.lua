@@ -17,6 +17,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "black" },
+			go = { "gofump" },
 		},
 		format_on_save = function(bufnr)
 			local function formatCallback(err)
