@@ -7,6 +7,7 @@ commonDeps=(
   bat
   fd
   uv
+  nodejs
 )
 
 optionalDeps=(
@@ -20,5 +21,3 @@ ubuntuDeps=()
 redhatDeps=()
 
 macosDeps=()
-
-

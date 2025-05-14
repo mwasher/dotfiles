@@ -172,6 +172,25 @@ install_uv() {
   verify_install "uv" "uv" $?
 }
 
+install_nodejs() {
+  pinfo "  >> nodejs"
+
+  case $arch in
+    arch)
+      sudo_cmd pacman -S --noconfirm --noprogressbar nodejs npm
+      ;;
+    ubuntu)
+      ;;
+    redhat)
+      ;;
+    macos)
+      ;;
+  esac
+
+  verify_install "nodejs" "node" $?
+  verify_install "npm" "npm" $?
+}
+
 install_zsh() {
   ptask ">> Installing zsh"
 

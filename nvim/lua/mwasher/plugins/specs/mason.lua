@@ -8,8 +8,8 @@ local default_packages = {
 	"yaml-language-server",
 	"basedpyright",
 	"black",
-	"gopls",
-	"gofumpt",
+	-- "gopls",
+	-- "gofumpt",
 }
 
 return {
