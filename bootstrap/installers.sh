@@ -180,6 +180,7 @@ install_nodejs() {
       sudo_cmd pacman -S --noconfirm --noprogressbar nodejs npm
       ;;
     ubuntu)
+      sudo_cmd apt install -y --no-install-recommends nodejs npm
       ;;
     redhat)
       ;;

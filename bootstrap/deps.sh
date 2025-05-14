@@ -7,11 +7,11 @@ commonDeps=(
   bat
   fd
   uv
-  nodejs
 )
 
 optionalDeps=(
   go
+  nodejs   #include npm
 )
 
 archDeps=()

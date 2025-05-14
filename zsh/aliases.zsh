@@ -21,6 +21,9 @@ fi
 if command -v bat &> /dev/null; then
   alias cat="bat --theme=Nord" 
   alias catp="bat -p --theme=Nord" 
+elif command -v batcat &> /dev/null; then
+  alias catp="batcat -p --theme=Nord" 
+  alias cat="batcat --theme=Nord" 
 fi
 
 if command -v eza &> /dev/null; then
