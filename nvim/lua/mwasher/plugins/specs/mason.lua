@@ -2,7 +2,7 @@
 -- https://github.com/williamboman/mason.nvim
 -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
 
-local default_packages = {
+local packages = {
 	"lua-language-server",
 	"stylua",
 	-- "yaml-language-server",
@@ -20,7 +20,7 @@ return {
 	{
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		opts = {
-			ensure_installed = default_packages,
+			ensure_installed = packages,
 			auto_update = true,
 			run_on_start = true,
 		},

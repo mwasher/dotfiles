@@ -19,11 +19,11 @@ if command -v nvim &> /dev/null; then
 fi
 
 if command -v bat &> /dev/null; then
-  alias cat="bat --theme=Nord" 
-  alias catp="bat -p --theme=Nord" 
+  alias cat="bat --theme=ansi" 
+  alias catp="bat -p --theme=ansi" 
 elif command -v batcat &> /dev/null; then
-  alias catp="batcat -p --theme=Nord" 
-  alias cat="batcat --theme=Nord" 
+  alias catp="batcat -p --theme=ansi" 
+  alias cat="batcat --theme=ansi" 
 fi
 
 if command -v eza &> /dev/null; then
@@ -31,5 +31,5 @@ if command -v eza &> /dev/null; then
 fi
 
 if command -v fzf &> /dev/null; then
-  alias fz="fzf --preview \"bat --style=numbers --color=always --theme=Nord {}\""
+  alias fz="fzf --preview \"bat --style=numbers --color=always --theme=ansi {}\""
 fi
