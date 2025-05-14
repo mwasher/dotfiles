@@ -1,6 +1,7 @@
 -- Native LSP configuration for Neovim 0.11+
 
 local servers = {
+	"bash-language-server",
 	"lua-language-server",
 	"yaml-language-server",
 	"basedpyright",

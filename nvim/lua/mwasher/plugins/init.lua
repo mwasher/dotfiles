@@ -12,6 +12,7 @@ require("lazy").setup({
 	require("mwasher.plugins.specs.blink"),
 	require("mwasher.plugins.specs.mason"),
 	require("mwasher.plugins.specs.noice"),
+	require("mwasher.plugins.specs.fidget"),
 	require("mwasher.plugins.specs.sunglasses"),
 	require("mwasher.plugins.specs.catppuccin"),
 	require("mwasher.plugins.specs.smear-cursor"),
