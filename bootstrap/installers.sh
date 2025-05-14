@@ -120,9 +120,11 @@ install_bat() {
   case $arch in
     arch)
       sudo_cmd pacman -S --noconfirm --noprogressbar bat
+      command="bat"
       ;;
     ubuntu)
       sudo_cmd apt install -y bat
+      command="batcat"
       ;;
     redhat)
       ;;
@@ -130,7 +132,7 @@ install_bat() {
       ;;
   esac
 
-  verify_install "bat" "bat" $?
+  verify_install "bat" command $?
 }
 
 install_fd() {
@@ -161,6 +163,7 @@ install_uv() {
       user_cmd "curl -LsSf https://astral.sh/uv/install.sh | sh"
       ;;
     ubuntu)
+      sudo_cmd apt install -y python3-venv
       user_cmd "curl -LsSf https://astral.sh/uv/install.sh | sh"
       ;;
     redhat)
