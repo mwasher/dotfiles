@@ -18,12 +18,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
-			{ Background = { Color = "#242933" } },
+			{ Background = { Color = "#000000" } },
 			{ Text = " " .. title .. " " },
 		}
 	else
 		return {
-			{ Background = { Color = "#17191f" } },
+			{ Background = { Color = "#000000" } },
 			{ Text = " " .. title .. " " },
 		}
 	end
@@ -62,8 +62,8 @@ config.window_frame = {
 	font = wezterm.font({ family = myFont, weight = "Bold" }),
 	font_size = 10,
 
-	active_titlebar_bg = "#242933",
-	inactive_titlebar_bg = "#242933",
+	active_titlebar_bg = "#000000",
+	inactive_titlebar_bg = "#000000",
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
@@ -86,7 +86,7 @@ config.keys = {
 	{ key = "f", mods = "LEADER", action = wezterm.action.ToggleFullScreen },
 }
 
-config.color_scheme = "nord"
+config.color_scheme = "Catppuccin Macchiato"
 
 config.colors = {
 	cursor_bg = "#bf616a",
@@ -108,8 +108,8 @@ config.window_background_gradient = {
 	blend = "Rgb",
 
 	colors = {
-		"#242933",
-		"#191d24",
+		"#000000",
+		"#000000",
 		"#000000",
 	},
 }
