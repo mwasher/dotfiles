@@ -74,7 +74,7 @@ function __virtualenv_prompt {
     fi
 }
 
-PROMPT="%(?:%F{magenta}➤:%F{red}!%?)%f %F{magenta}%m%f:%F{blue}%~%f "
+PROMPT="%(?:%F{red}➤:%F{red}!%?)%f %F{magenta}%m%f:%F{blue}%~%f "
 PROMPT+="\$(__git_prompt)"
 PROMPT+="\$(__virtualenv_prompt)"
 
