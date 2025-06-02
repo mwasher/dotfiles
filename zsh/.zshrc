@@ -57,9 +57,9 @@ function __git_prompt () {
     STATUS=$(git status ${FLAGS} 2> /dev/null | tail -n1)
 
     if [[ -n $STATUS ]]; then
-      echo "%F{red}[%F{yellow} ${ref#refs/heads/}%F{red}]%f "
+      echo "%F{red}[%F{purple} ${ref#refs/heads/}%F{red}]%f "
     else
-      echo "%F{green}[%F{yellow} ${ref#refs/heads/}%F{green}]%f "
+      echo "%F{green}[%F{purple} ${ref#refs/heads/}%F{green}]%f "
     fi
 
 }
@@ -74,7 +74,7 @@ function __virtualenv_prompt {
     fi
 }
 
-PROMPT="%(?:%F{green}➤:%F{red}!%?)%f %F{blue}%m%f:%F{cyan}%~%f "
+PROMPT="%(?:%F{purple}➤:%F{red}!%?)%f %F{magenta}%m%f:%F{purple}%~%f "
 PROMPT+="\$(__git_prompt)"
 PROMPT+="\$(__virtualenv_prompt)"
 
