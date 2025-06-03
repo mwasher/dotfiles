@@ -7,6 +7,7 @@ commonDeps=(
   bat
   fd
   uv
+  starship
 )
 
 optionalDeps=(

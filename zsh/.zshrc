@@ -153,4 +153,9 @@ if command -v uv &> /dev/null; then
   eval "$(uv generate-shell-completion zsh)"
 fi
 
+# starship prompt
+if command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi
+
 . "$HOME/.local/share/../bin/env"
