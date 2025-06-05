@@ -17,6 +17,33 @@ return {
 				},
 			},
 		},
+		indent = {
+			indent = {
+				enabled = false,
+			},
+			scope = {
+				enabled = false,
+			},
+			chunk = {
+				enabled = true,
+				only_current = true,
+				char = {
+					corner_top = "┌",
+					corner_bottom = "└",
+					-- corner_top = "╭",
+					-- corner_bottom = "╰",
+					horizontal = "",
+					vertical = "│",
+					arrow = "",
+				},
+			},
+			animate = {
+				easing = "outQuad",
+				duration = {
+					step = 30,
+				},
+			},
+		},
 		notifier = {
 			enabled = true,
 			timeout = 5000,
@@ -32,7 +59,7 @@ return {
 		scroll = {
 			enabled = true,
 			animate = {
-				duration = 5,
+				duration = { step = 15, total = 250 },
 				easing = "inOutQuad",
 				fps = 60,
 			},
@@ -94,6 +121,10 @@ return {
 			vim.keymap.set("n", "<leader>bd", function()
 				Snacks.bufdelete()
 			end, { desc = "Snacks: Close buffer" }),
+
+			-- Modify colors
+			vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#5c5f77", bg = "none", nocombine = true }),
+			vim.api.nvim_set_hl(0, "SnacksIndentChunk", { fg = "#5c5f77", bg = "none", nocombine = true }),
 		})
 	end,
 
