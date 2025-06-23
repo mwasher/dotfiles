@@ -13,6 +13,7 @@ local n_mappings = {
 	{ "<C-d>", "<C-d>zz", "Center on cursor on ^d" },
 	{ "n", "nzzzv", "Next search item centered" },
 	{ "N", "Nzzzv", "Previous search item centered" },
+	{ "p", "gP", "Pasting with cursor correction" },
 	{ "<C-i>", ":bp<CR>", "Previous buffer", silent = true },
 	{ "<C-p>", ":bn<CR>", "Next buffer", silent = true },
 	{ "<leader>o", ":tabnew<CR>", "New tab", silent = true },
@@ -28,7 +29,7 @@ local i_mappings = {
 
 -- Mappings for visual mode
 local x_mappings = {
-	{ "p", '"_dp', "Paste" }, -- keeping register contents the same when overwriting text
+	{ "p", '"_dp', "paste" }, -- keeping register contents the same when overwriting text
 }
 
 -- Mappings for select mode
