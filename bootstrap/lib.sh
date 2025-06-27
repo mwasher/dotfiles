@@ -38,7 +38,7 @@ sudo_cmd() {
 
   echo >> $logFile
   echo "$(date -u)" >> $logFile
-  sudo "$@" &>> $logFile
+  sudo "$@" &> $logFile
 
   return $?
 }
@@ -46,7 +46,7 @@ sudo_cmd() {
 user_cmd() {
   echo >> $logFile
   echo "$(date -u)" >> $logFile
-  eval "$@" &>> $logFile
+  eval "$@" &> $logFile
 
   return $?
 }

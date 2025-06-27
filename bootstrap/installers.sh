@@ -12,6 +12,7 @@ install_neovim() {
     redhat)
       ;;
     macos)
+      user_cmd brew install neovim
       ;;
   esac
 
@@ -31,6 +32,7 @@ install_git() {
     redhat)
       ;;
     macos)
+      user_cmd brew install git
       ;;
   esac
 
@@ -50,6 +52,7 @@ install_gcc() {
     redhat)
       ;;
     macos)
+      user_cmd brew install gcc
       ;;
   esac
 
@@ -68,6 +71,7 @@ install_go() {
     redhat)
       ;;
     macos)
+      user_cmd brew install go
       ;;
   esac
 
@@ -87,6 +91,7 @@ install_ripgrep() {
     redhat)
       ;;
     macos)
+      user_cmd brew install ripgrep
       ;;
   esac
 
@@ -108,6 +113,7 @@ install_eza() {
     redhat)
       ;;
     macos)
+      user_cmd brew install eza
       ;;
   esac
 
@@ -129,6 +135,7 @@ install_bat() {
     redhat)
       ;;
     macos)
+      user_cmd brew install bat
       ;;
   esac
 
@@ -149,6 +156,7 @@ install_fd() {
     redhat)
       ;;
     macos)
+      user_cmd brew install fd
       ;;
   esac
 
@@ -169,6 +177,7 @@ install_uv() {
     redhat)
       ;;
     macos)
+      user_cmd brew install uv
       ;;
   esac
 
@@ -188,6 +197,7 @@ install_nodejs() {
     redhat)
       ;;
     macos)
+      user_cmd brew install nodejs
       ;;
   esac
 
@@ -207,6 +217,7 @@ install_starship() {
     redhat)
       ;;
     macos)
+      user_cmd brew install starship
       ;;
   esac
 
