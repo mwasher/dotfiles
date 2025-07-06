@@ -45,11 +45,11 @@ config.font = wezterm.font(myFont)
 config.font_size = 12
 
 config.enable_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 
 config.window_padding = {
 	left = 5,
@@ -97,8 +97,6 @@ config.colors = {
 }
 
 config.window_background_opacity = 0.98
-
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 config.window_background_gradient = {
 	interpolation = "Linear",
