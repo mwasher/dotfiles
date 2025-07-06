@@ -7,6 +7,7 @@ commonDeps=(
   bat
   fd
   uv
+  nodejs
   starship
 )
 

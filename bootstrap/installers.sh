@@ -268,7 +268,7 @@ install_dotfiles() {
   ln -snf "${dotRoot}/zsh" ~/.config/zsh
   ln -snf "${dotRoot}/zsh/.zshenv" ~/.zshenv
 
-  pinfo " >> starship"
+  pinfo "  >> starship"
   ln -snf "${dotRoot}/starship/starship.toml" ~/.config/starship.toml
 
   pinfo "  >> neovim"
