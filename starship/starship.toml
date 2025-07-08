@@ -181,7 +181,7 @@ format = "[$user ]($style)"
 
 [hostname]
 ssh_only = false
-ssh_symbol = "  "
+ssh_symbol = " "
 style = "blue"
 format = "[$ssh_symbol$hostname]($style) "
 
