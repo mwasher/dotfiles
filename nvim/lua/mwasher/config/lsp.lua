@@ -55,9 +55,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		client.server_capabilities.semanticTokensProvider = nil
 
-		vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#be9db9" })
-		vim.api.nvim_set_hl(0, "Pmenu", { bg = "" })
-
 		local keymap = vim.keymap.set
 		local lsp = vim.lsp
 		local opts = { silent = true }

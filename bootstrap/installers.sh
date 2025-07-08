@@ -276,7 +276,7 @@ install_dotfiles() {
 
   pinfo "  >> eza"
   ln -snf "${dotRoot}/eza" ~/.config/eza
-
+  
   pinfo "  >> wezterm"
   ln -snf "${dotRoot}/wezterm" ~/.config/wezterm
 

@@ -75,8 +75,5 @@ return {
 	init = function()
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 		vim.lsp.config("*", { capabilities = capabilities })
-
-		vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#be9db9", bg = "" })
-		vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#be9db9" })
 	end,
 }

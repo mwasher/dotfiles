@@ -121,10 +121,6 @@ return {
 			vim.keymap.set("n", "<leader>bd", function()
 				Snacks.bufdelete()
 			end, { desc = "Snacks: Close buffer" }),
-
-			-- Modify colors
-			vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#5c5f77", bg = "none", nocombine = true }),
-			vim.api.nvim_set_hl(0, "SnacksIndentChunk", { fg = "#5c5f77", bg = "none", nocombine = true }),
 		})
 	end,
 

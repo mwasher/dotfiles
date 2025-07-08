@@ -18,12 +18,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
-			{ Background = { Color = "#14151c" } },
+			{ Background = { Color = "#333c43" } },
 			{ Text = " " .. title .. " " },
 		}
 	else
 		return {
-			{ Background = { Color = "#14151c" } },
+			{ Background = { Color = "#333c43" } },
 			{ Text = " " .. title .. " " },
 		}
 	end
@@ -52,9 +52,9 @@ config.use_fancy_tab_bar = true
 config.window_decorations = "RESIZE"
 
 config.window_padding = {
-	left = 5,
+	left = 3,
 	right = 0,
-	top = 5,
+	top = 3,
 	bottom = 0,
 }
 
@@ -62,8 +62,8 @@ config.window_frame = {
 	font = wezterm.font({ family = myFont, weight = "Bold" }),
 	font_size = 10,
 
-	active_titlebar_bg = "#14151c",
-	inactive_titlebar_bg = "#14151c",
+	active_titlebar_bg = "#333c43",
+	inactive_titlebar_bg = "#333c43",
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
@@ -82,34 +82,10 @@ config.keys = {
 	{ key = "J", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Down", 5 }) },
 	{ key = "K", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Up", 5 }) },
 	{ key = "L", mods = "ALT|SHIFT", action = act.AdjustPaneSize({ "Right", 5 }) },
-	{ key = "z", mods = "LEADER", action = wezterm.action.TogglePaneZoomState },
-	{ key = "f", mods = "LEADER", action = wezterm.action.ToggleFullScreen },
+	{ key = "z", mods = "ALT", action = wezterm.action.TogglePaneZoomState },
+	{ key = "f", mods = "ALT", action = wezterm.action.ToggleFullScreen },
 }
 
-config.color_scheme = "Catppuccin Macchiato"
-
-config.colors = {
-	cursor_bg = "#bf616a",
-	cursor_fg = "#000000",
-
-	selection_fg = "#000000",
-	selection_bg = "#b1c89d",
-}
-
-config.window_background_opacity = 0.98
-
-config.window_background_gradient = {
-	interpolation = "Linear",
-
-	orientation = "Vertical",
-
-	blend = "Rgb",
-
-	colors = {
-		"#14151c",
-		"#14151c",
-		"#14151c",
-	},
-}
+config.color_scheme = "Everforest Dark Soft (Gogh)"
 
 return config

@@ -2,17 +2,15 @@
 -- https://github.com/nvim-lualine/lualine.nvim
 
 local colors = {
-	bg = "#363a4f",
-	fg = "#bbc3d4",
-	yellow = "#eed49f",
-	cyan = "#8bd5ca",
-	darkblue = "#7dc4e4",
-	green = "#a6da95",
-	orange = "#f5a97f",
-	violet = "#b7bdf8",
-	magenta = "#c6a0f6",
-	blue = "#8aadf4",
-	red = "#ed8796",
+	fg = "#d3c6aa",
+	bg = "#293136",
+	yellow = "#dbbc7f",
+	cyan = "#83c092",
+	green = "#a7c080",
+	orange = "#e69875",
+	magenta = "#d699b6",
+	blue = "#7fbbb3",
+	red = "#e67e80",
 }
 
 local conditions = {
@@ -92,8 +90,8 @@ ins_left({
 			S = colors.orange,
 			[""] = colors.orange,
 			ic = colors.yellow,
-			R = colors.violet,
-			Rv = colors.violet,
+			R = colors.magenta,
+			Rv = colors.magenta,
 			cv = colors.red,
 			ce = colors.red,
 			r = colors.cyan,
@@ -186,7 +184,7 @@ ins_right({
 ins_right({
 	"branch",
 	icon = "",
-	color = { fg = colors.violet, gui = "bold" },
+	color = { fg = colors.magenta, gui = "bold" },
 })
 
 ins_right({

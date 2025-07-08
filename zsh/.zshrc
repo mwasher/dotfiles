@@ -6,10 +6,7 @@ echo -ne '\e[1 q]' &> /dev/null
 # Platform specific
 case "$(uname -s)" in
   Linux)
-    # Load env variable exports
-    [[ -f $ZDOTDIR/.dircolors ]]
-      eval "$(dircolors $ZDOTDIR/.dircolors)"
-  	;;
+    ;;
 
   Darwin)
     if command -v /opt/homebrew/bin/brew &> /dev/null; then
@@ -160,3 +157,5 @@ fi
 if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
+
+. "$HOME/.local/share/../bin/env"
