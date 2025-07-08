@@ -1,7 +1,7 @@
 unsetopt BEEP
 
 # Set cursor to blinking block
-echo -ne '\e[1 q]' &> /dev/null
+echo '\e[5 q' &> /dev/null
 
 # Platform specific
 case "$(uname -s)" in
@@ -158,3 +158,5 @@ if command -v starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
 
+
+. "$HOME/.local/share/../bin/env"
