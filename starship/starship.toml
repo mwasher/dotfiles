@@ -206,7 +206,7 @@ symbol = " "
 [username]
 show_always = true
 style_root = "red"
-style_user = "grey1"
+style_user = "grey2"
 format = "[$user ]($style)"
 
 [hostname]
