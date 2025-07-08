@@ -50,11 +50,13 @@ config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
 config.window_decorations = "RESIZE"
+config.window_background_opacity = 0.97
+config.color_scheme = "Everforest Dark Soft (Gogh)"
 
 config.window_padding = {
-	left = 3,
+	left = 5,
 	right = 0,
-	top = 3,
+	top = 5,
 	bottom = 0,
 }
 
@@ -85,7 +87,5 @@ config.keys = {
 	{ key = "z", mods = "ALT", action = wezterm.action.TogglePaneZoomState },
 	{ key = "f", mods = "ALT", action = wezterm.action.ToggleFullScreen },
 }
-
-config.color_scheme = "Everforest Dark Soft (Gogh)"
 
 return config
