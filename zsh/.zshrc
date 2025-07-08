@@ -1,7 +1,7 @@
 unsetopt BEEP
 
 # Set cursor to blinking block
-echo '\e[5 q' &> /dev/null
+echo '\e[1 q'
 
 # Platform specific
 case "$(uname -s)" in
