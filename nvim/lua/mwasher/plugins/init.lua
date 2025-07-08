@@ -17,5 +17,4 @@ require("lazy").setup({
 	require("mwasher.plugins.specs.nvim-colorizer"),
 	require("mwasher.plugins.specs.smear-cursor"),
 	require("mwasher.plugins.specs.lualine"),
-	-- require("mwasher.plugins.specs.barbecue"),
 })
