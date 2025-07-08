@@ -4,6 +4,7 @@ export EDITOR=$VISUAL
 
 case "$(uname -s)" in
   Darwin)
+    export EZA_CONFIG_DIR=~/.config/eza
 	  ;;
 
   Linux)
