@@ -3,7 +3,7 @@
 
 local colors = {
 	fg = "#d3c6aa",
-	bg = "#293136",
+	bg = "#2e383c",
 	yellow = "#dbbc7f",
 	cyan = "#83c092",
 	green = "#a7c080",
@@ -64,14 +64,6 @@ local function ins_right(component)
 end
 
 ins_left({
-	function()
-		return "▊"
-	end,
-	color = { fg = colors.blue }, -- Sets highlighting of component
-	padding = { left = 0, right = 1 }, -- We don't need space before this
-})
-
-ins_left({
 	-- mode component
 	function()
 		return ""
@@ -114,7 +106,7 @@ ins_left({
 ins_left({
 	"filename",
 	cond = conditions.buffer_not_empty,
-	color = { fg = colors.magenta, gui = "bold" },
+	color = { fg = colors.yellow },
 })
 
 ins_left({
@@ -125,6 +117,23 @@ ins_left({
 ins_left({ "location" })
 
 ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+
+ins_left({
+	"branch",
+	icon = "",
+	color = { fg = colors.magenta, gui = "bold" },
+})
+
+ins_left({
+	"diff",
+	symbols = { added = " ", modified = "󰝤 ", removed = " " },
+	diff_color = {
+		added = { fg = colors.green },
+		modified = { fg = colors.orange },
+		removed = { fg = colors.red },
+	},
+	cond = conditions.hide_in_width,
+})
 
 ins_left({
 	"diagnostics",
@@ -139,31 +148,14 @@ ins_left({
 
 -- Insert mid section. You can make any number of sections in neovim :)
 -- for lualine it's any number greater then 2
-ins_left({
-	function()
-		return "%="
-	end,
-})
+-- ins_left({
+-- 	function()
+-- 		return "%="
+-- 	end,
+-- })
 
-ins_left({
-	-- Lsp server name .
-	function()
-		local msg = "No Active Lsp"
-		local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
-		local clients = vim.lsp.get_clients()
-		if next(clients) == nil then
-			return msg
-		end
-		for _, client in ipairs(clients) do
-			local filetypes = client.config.filetypes
-			if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-				return client.name
-			end
-		end
-		return msg
-	end,
-	icon = " LSP:",
-	color = { fg = colors.fg, gui = "bold" },
+ins_right({
+	"lsp_status",
 })
 
 -- Add components to right sections
@@ -179,32 +171,6 @@ ins_right({
 	fmt = string.upper,
 	icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
 	color = { fg = colors.green, gui = "bold" },
-})
-
-ins_right({
-	"branch",
-	icon = "",
-	color = { fg = colors.magenta, gui = "bold" },
-})
-
-ins_right({
-	"diff",
-	-- Is it me or the symbol for modified us really weird
-	-- symbols = { added = " ", modified = "󰝤 ", removed = " " },
-	-- diff_color = {
-	-- 	added = { fg = colors.green },
-	-- 	modified = { fg = colors.orange },
-	-- 	removed = { fg = colors.red },
-	-- },
-	-- cond = conditions.hide_in_width,
-})
-
-ins_right({
-	function()
-		return "▊"
-	end,
-	color = { fg = colors.blue },
-	padding = { left = 1 },
 })
 
 return {

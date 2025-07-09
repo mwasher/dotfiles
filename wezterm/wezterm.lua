@@ -18,12 +18,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
-			{ Background = { Color = "#333c43" } },
+			{ Background = { Color = "#2e383c" } },
 			{ Text = " " .. title .. " " },
 		}
 	else
 		return {
-			{ Background = { Color = "#333c43" } },
+			{ Background = { Color = "#2e383c" } },
 			{ Text = " " .. title .. " " },
 		}
 	end
@@ -52,6 +52,9 @@ config.use_fancy_tab_bar = true
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.97
 config.color_scheme = "Everforest Dark Soft (Gogh)"
+config.colors = {
+	background = "#2e383c",
+}
 
 config.window_padding = {
 	left = 5,
@@ -64,8 +67,8 @@ config.window_frame = {
 	font = wezterm.font({ family = myFont, weight = "Bold" }),
 	font_size = 10,
 
-	active_titlebar_bg = "#333c43",
-	inactive_titlebar_bg = "#333c43",
+	active_titlebar_bg = "#2e383c",
+	inactive_titlebar_bg = "#2e383c",
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
