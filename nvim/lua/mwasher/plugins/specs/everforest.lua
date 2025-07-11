@@ -20,17 +20,15 @@ return {
 			diagnostic_text_highlight = false,
 			diagnostic_virtual_text = "coloured",
 			diagnostic_lign_highlight = false,
-			spell_foreground = false,
+			spell_foregroun = false,
 			inlay_hints_background = "none",
 			float_style = "bright",
 
 			on_highlights = function(hl, palette)
-				-- hl.BlinkCmpMenuBorder = { fg = "#000000", bg = "", sp = "" }
-				-- hl.BlinkCmpDocBorder = { fg = "#000000", bg = "", sp = "" }
 				hl.FloatBorder = hl.BlinkCmpMenuBorder
-				-- hl.FloatBorder = { fg = "#000000", bg = "", sp = "" }
-				-- hl.SnacksIndent = { fg = "#000000", bg = "", sp = "" }
-				-- hl.SnacksIndentChunk = { fg = "#000000", bg = "", sp = "" }
+				hl.CursorLine = { bg = palette.bg_dim }
+				hl.SnacksIndent = { fg = palette.bg_yellow, bg = "" }
+				hl.SnacksIndentChunk = { fg = palette.bg_yellow, bg = "" }
 			end,
 		})
 	end,
