@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 local myFont = "JetBrainsMono Nerd Font"
-local myBGColor = "#272e33"
+local myBGColor = "#374145"
 
 local act = wezterm.action
 
@@ -51,10 +51,14 @@ config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.97
+config.window_background_opacity = 1.0
 config.color_scheme = "Everforest Dark Soft (Gogh)"
 config.colors = {
 	background = myBGColor,
+}
+config.inactive_pane_hsb = {
+	saturation = 0.9,
+	brightness = 0.8,
 }
 
 config.window_padding = {

@@ -26,7 +26,7 @@ return {
 
 			on_highlights = function(hl, palette)
 				hl.FloatBorder = hl.BlinkCmpMenuBorder
-				hl.CursorLine = { bg = palette.bg_dim }
+				hl.CursorLine = { bg = palette.bg1 }
 				hl.SnacksIndent = { fg = palette.bg_yellow, bg = "" }
 				hl.SnacksIndentChunk = { fg = palette.bg_yellow, bg = "" }
 			end,
