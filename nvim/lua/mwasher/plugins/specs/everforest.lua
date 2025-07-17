@@ -19,8 +19,8 @@ return {
 			show_eob = false,
 			diagnostic_text_highlight = false,
 			diagnostic_virtual_text = "coloured",
-			diagnostic_lign_highlight = false,
-			spell_foregroun = false,
+			diagnostic_line_highlight = false,
+			spell_foreground = false,
 			inlay_hints_background = "none",
 			float_style = "bright",
 
