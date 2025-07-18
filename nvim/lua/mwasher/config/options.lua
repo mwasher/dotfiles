@@ -29,8 +29,8 @@ for option, value in pairs({
 	showbreak = "↪ ",
 	breakindent = true,
 
-	-- Some transparency for pop-up windows
-	pumblend = 15,
+	-- Disable popup transparencies
+	pumblend = 0,
 
 	-- Move to start of line when moving with ctrl-b/f/d/u
 	startofline = true,

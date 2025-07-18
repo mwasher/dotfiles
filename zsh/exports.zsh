@@ -1,4 +1,5 @@
 export PATH=$HOME/.local/bin:$PATH
+export GOPATH=$HOME/.go
 export VISUAL=vim
 export EDITOR=$VISUAL
 
