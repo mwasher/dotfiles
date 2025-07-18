@@ -3,7 +3,7 @@
 
 local colors = {
 	fg = "#d3c6aa",
-	bg = "#272e33",
+	bg = "#5d6b66",
 	yellow = "#dbbc7f",
 	cyan = "#83c092",
 	green = "#a7c080",
@@ -66,7 +66,7 @@ end
 ins_left({
 	-- mode component
 	function()
-		return ""
+		return " "
 	end,
 	color = function()
 		-- auto change color according to neovims mode
