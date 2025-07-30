@@ -28,7 +28,7 @@ return {
 				hl.FloatBorder = hl.BlinkCmpMenuBorder
 				hl.NormalFloat = { bg = "none" }
 				hl.Pmenu = { bg = "none" }
-				hl.CursorLine = { bg = palette.bg1 }
+				hl.CursorLine = { bg = palette.bg2 }
 				hl.SnacksIndent = { fg = palette.bg_yellow, bg = "" }
 				hl.SnacksIndentChunk = { fg = palette.bg_yellow, bg = "" }
 			end,
