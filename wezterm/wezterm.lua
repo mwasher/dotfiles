@@ -52,9 +52,10 @@ config.use_fancy_tab_bar = true
 
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 1.0
-config.color_scheme = "Everforest Dark Soft (Gogh)"
+config.color_scheme = "Everforest Dark Medium (Gogh)"
 config.colors = {
 	background = myBGColor,
+	cursor_bg = "#a7c080",
 }
 config.inactive_pane_hsb = {
 	saturation = 0.9,
