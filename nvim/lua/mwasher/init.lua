@@ -26,5 +26,12 @@ else
 	}
 end
 
+-- Add filetype associations
+vim.filetype.add({
+	extension = {
+		gohtml = "html",
+	},
+})
+
 require("mwasher.config")
 require("mwasher.plugins")
