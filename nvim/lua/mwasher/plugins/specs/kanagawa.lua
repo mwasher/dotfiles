@@ -17,7 +17,7 @@ return {
 			statementStyle = { bold = false },
 			typeStyle = {},
 			transparent = true,
-			dimInactive = true,
+			dimInactive = false,
 			terminalColors = true,
 			colors = {
 				palette = {},
@@ -41,6 +41,7 @@ return {
 					NormalFloat = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
 					FloatBorder = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
 					FloatTitle = { bg = "none" },
+					CursorLine = { bg = theme.ui.bg_p1 },
 				}
 			end,
 			theme = "dragon",
