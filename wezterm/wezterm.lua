@@ -1,7 +1,6 @@
 local wezterm = require("wezterm")
 
-local myFont = "JetBrainsMono Nerd Font"
-local myBGColor = "#374145"
+local myFont = "Iosevka Nerd Font"
 
 local act = wezterm.action
 
@@ -19,12 +18,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
-			{ Background = { Color = myBGColor } },
+			{ Background = { Color = #000000 } },
 			{ Text = " " .. title .. " " },
 		}
 	else
 		return {
-			{ Background = { Color = myBGColor } },
+			{ Background = { Color = #000000 } },
 			{ Text = " " .. title .. " " },
 		}
 	end
@@ -43,7 +42,7 @@ config.adjust_window_size_when_changing_font_size = false
 config.audible_bell = "Disabled"
 
 config.font = wezterm.font(myFont)
-config.font_size = 12
+config.font_size = 14
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
@@ -52,11 +51,8 @@ config.use_fancy_tab_bar = true
 
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 1.0
-config.color_scheme = "Everforest Dark Medium (Gogh)"
-config.colors = {
-	background = myBGColor,
-	cursor_bg = "#a7c080",
-}
+config.color_scheme = "Kanagawa Dragon (Gogh)"
+
 config.inactive_pane_hsb = {
 	saturation = 0.9,
 	brightness = 0.8,
@@ -72,9 +68,6 @@ config.window_padding = {
 config.window_frame = {
 	font = wezterm.font({ family = myFont, weight = "Bold" }),
 	font_size = 10,
-
-	active_titlebar_bg = myBGColor,
-	inactive_titlebar_bg = myBGColor,
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
