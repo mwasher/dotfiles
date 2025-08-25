@@ -59,7 +59,7 @@ config.inactive_pane_hsb = {
 }
 
 config.window_padding = {
-	left = 5,
+	left = 10,
 	right = 0,
 	top = 5,
 	bottom = 0,
