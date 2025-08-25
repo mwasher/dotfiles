@@ -2,15 +2,15 @@
 -- https://github.com/nvim-lualine/lualine.nvim
 
 local colors = {
-	fg = "#d3c6aa",
-	bg = "#56635f",
-	yellow = "#dbbc7f",
-	cyan = "#83c092",
-	green = "#a7c080",
-	orange = "#e69875",
-	magenta = "#d699b6",
-	blue = "#7fbbb3",
-	red = "#e67e80",
+	fg = "#c5c9c5",
+	bg = "#282727",
+	yellow = "#c4b28a",
+	cyan = "#949fb5",
+	green = "#87a987",
+	orange = "#b6927b",
+	magenta = "#8992a7",
+	blue = "#8ea4a2",
+	red = "#c4746e",
 }
 
 local conditions = {
