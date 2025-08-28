@@ -18,12 +18,12 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
-			{ Background = { Color = #000000 } },
+			{ Background = { Color = "#181616" } },
 			{ Text = " " .. title .. " " },
 		}
 	else
 		return {
-			{ Background = { Color = #000000 } },
+			{ Background = { Color = "#282727" } },
 			{ Text = " " .. title .. " " },
 		}
 	end
@@ -42,7 +42,7 @@ config.adjust_window_size_when_changing_font_size = false
 config.audible_bell = "Disabled"
 
 config.font = wezterm.font(myFont)
-config.font_size = 14
+config.font_size = 13
 
 config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
@@ -59,15 +59,17 @@ config.inactive_pane_hsb = {
 }
 
 config.window_padding = {
-	left = 10,
+	left = 5,
 	right = 0,
-	top = 5,
+	top = 0,
 	bottom = 0,
 }
 
 config.window_frame = {
 	font = wezterm.font({ family = myFont, weight = "Bold" }),
-	font_size = 10,
+	font_size = 11,
+
+	active_titlebar_bg = "#282727",
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
