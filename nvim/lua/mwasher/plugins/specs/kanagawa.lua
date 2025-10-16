@@ -13,11 +13,11 @@ return {
 			undercurl = true,
 			commentStyle = { italic = true },
 			functionStyle = {},
-			keywordStyle = { italic = true },
+			keywordStyle = { italic = false },
 			statementStyle = { bold = false },
 			typeStyle = {},
 			transparent = true,
-			dimInactive = false,
+			dimInactive = true,
 			terminalColors = true,
 			colors = {
 				palette = {},

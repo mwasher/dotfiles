@@ -53,7 +53,7 @@ config.initial_cols = 180
 config.initial_rows = 50
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 1.0
+config.window_background_opacity = 0.95
 config.color_scheme = "Kanagawa Dragon (Gogh)"
 
 config.inactive_pane_hsb = {
