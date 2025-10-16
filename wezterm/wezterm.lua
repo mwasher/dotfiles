@@ -49,6 +49,9 @@ config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = true
 
+config.initial_cols = 180
+config.initial_rows = 50
+
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 1.0
 config.color_scheme = "Kanagawa Dragon (Gogh)"
@@ -59,9 +62,9 @@ config.inactive_pane_hsb = {
 }
 
 config.window_padding = {
-	left = 5,
+	left = 8,
 	right = 0,
-	top = 0,
+	top = 5,
 	bottom = 0,
 }
 
