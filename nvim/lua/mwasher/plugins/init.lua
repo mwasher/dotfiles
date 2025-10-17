@@ -19,7 +19,3 @@ require("lazy").setup({
 	require("mwasher.plugins.specs.lualine"),
 	require("mwasher.plugins.specs.barbecue"),
 })
-
--- vim.o.pumborder = "rounded"
--- vim.api.nvim_set_hl(0, "Pmenu", { bg = "NONE" })
--- vim.api.nvim_set_hl(0, "PmenuBorder", { bg = "NONE", fg = "#CC6600" })

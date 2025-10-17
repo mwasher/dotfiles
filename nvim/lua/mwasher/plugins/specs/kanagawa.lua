@@ -38,6 +38,7 @@ return {
 					PmenuSbar = { bg = theme.ui.bg_m1 },
 					PmenuThumb = { bg = theme.ui.bg_p2 },
 					BlinkCmpMenuBorder = { fg = "none", bg = "none" },
+					NoiceCmdlinePopup = { bg = theme.ui.bg_p1 },
 					NormalFloat = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
 					FloatBorder = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
 					FloatTitle = { bg = "none" },

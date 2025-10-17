@@ -31,6 +31,8 @@ for option, value in pairs({
 
 	-- Disable popup transparencies
 	pumblend = 0,
+	winblend = 0,
+	pumborder = "rounded",
 
 	-- Move to start of line when moving with ctrl-b/f/d/u
 	startofline = true,
