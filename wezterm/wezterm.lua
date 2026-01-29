@@ -57,6 +57,8 @@ config.window_background_opacity = 0.95
 config.color_scheme = "Mono Theme (terminal.sexy)"
 config.colors = {
 	background = "#121212",
+	cursor_bg = "#1bfd9c",
+	cursor_fg = "#191919",
 }
 
 config.inactive_pane_hsb = {
