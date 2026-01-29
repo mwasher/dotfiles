@@ -2,16 +2,7 @@
 -- https://github.com/williamboman/mason.nvim
 -- https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim
 
-local packages = {
-	"bash-language-server",
-	"lua-language-server",
-	"stylua",
-	-- "yaml-language-server",
-	"basedpyright",
-	"black",
-	-- "gopls",
-	-- "gofumpt",
-}
+local packages = {}
 
 return {
 	{
