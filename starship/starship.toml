@@ -62,9 +62,6 @@ symbol = "☸ "
 format = "[$symbol$context]($style) "
 disabled = false
 
-[nix_shell]
-symbol = " "
-
 [git_branch]
 format = "[$branch]($style)"
 
@@ -82,8 +79,8 @@ stashed = "≡"
 format = "[$duration]($style) "
 
 
-# [aws]
-# symbol = "  "
+[aws]
+symbol = "  "
 #
 # [buf]
 # symbol = " "
@@ -91,11 +88,11 @@ format = "[$duration]($style) "
 # [bun]
 # symbol = " "
 #
-# [c]
-# symbol = " "
+[c]
+symbol = " "
 #
-# [cpp]
-# symbol = " "
+[cpp]
+symbol = " "
 #
 # [cmake]
 # symbol = " "
@@ -103,10 +100,8 @@ format = "[$duration]($style) "
 # [conda]
 # symbol = " "
 #
-# [container]
-# disabled = true
-#
-# [character]
+[container]
+disabled = true
 #
 # [crystal]
 # symbol = " "
@@ -121,8 +116,8 @@ format = "[$duration]($style) "
 # read_only = " 󰌾"
 # style = "yellow"
 #
-# [docker_context]
-# symbol = " "
+[docker_context]
+symbol = " "
 #
 # [elixir]
 # symbol = " "
@@ -136,8 +131,8 @@ format = "[$duration]($style) "
 # [fossil_branch]
 # symbol = " "
 #
-# [gcloud]
-# symbol = "  "
+[gcloud]
+symbol = "  "
 #
 # [git_branch]
 # symbol = " "
@@ -146,8 +141,8 @@ format = "[$duration]($style) "
 # [git_commit]
 # tag_symbol = '  '
 #
-# [golang]
-# symbol = " "
+[golang]
+symbol = " "
 #
 # [guix_shell]
 # symbol = " "
@@ -173,8 +168,8 @@ format = "[$duration]($style) "
 # style = "aqua"
 # format = "[$ssh_symbol$hostname]($style) "
 #
-# [java]
-# symbol = " "
+[java]
+symbol = " "
 #
 # [julia]
 # symbol = " "
@@ -182,8 +177,8 @@ format = "[$duration]($style) "
 # [kotlin]
 # symbol = " "
 #
-# [lua]
-# symbol = " "
+[lua]
+symbol = "  "
 #
 # [memory_usage]
 # symbol = "󰍛 "
@@ -194,70 +189,70 @@ format = "[$duration]($style) "
 # [nim]
 # symbol = "󰆥 "
 #
-# [nix_shell]
-# symbol = " "
+[nix_shell]
+symbol = " "
 #
-# [nodejs]
-# symbol = " "
+[nodejs]
+symbol = " "
 #
 # [ocaml]
 # symbol = " "
 #
-# [os.symbols]
-# Alpaquita = " "
-# Alpine = " "
-# AlmaLinux = " "
-# Amazon = " "
-# Android = " "
-# Arch = " "
-# Artix = " "
-# CachyOS = " "
-# CentOS = " "
-# Debian = " "
-# DragonFly = " "
-# Emscripten = " "
-# EndeavourOS = " "
-# Fedora = " "
-# FreeBSD = " "
-# Garuda = "󰛓 "
-# Gentoo = " "
-# HardenedBSD = "󰞌 "
-# Illumos = "󰈸 "
-# Kali = " "
-# Linux = " "
-# Mabox = " "
-# Macos = " "
-# Manjaro = " "
-# Mariner = " "
-# MidnightBSD = " "
-# Mint = " "
-# NetBSD = " "
-# NixOS = " "
-# Nobara = " "
-# OpenBSD = "󰈺 "
-# openSUSE = " "
-# OracleLinux = "󰌷 "
-# Pop = " "
-# Raspbian = " "
-# Redhat = " "
-# RedHatEnterprise = " "
-# RockyLinux = " "
-# Redox = "󰀘 "
-# Solus = "󰠳 "
-# SUSE = " "
-# Ubuntu = " "
-# Unknown = " "
-# Void = " "
-# Windows = "󰍲 "
+ [os.symbols]
+ Alpaquita = " "
+ Alpine = " "
+ AlmaLinux = " "
+ Amazon = " "
+ Android = " "
+ Arch = " "
+ Artix = " "
+ CachyOS = " "
+ CentOS = " "
+ Debian = " "
+ DragonFly = " "
+ Emscripten = " "
+ EndeavourOS = " "
+ Fedora = " "
+ FreeBSD = " "
+ Garuda = "󰛓 "
+ Gentoo = " "
+ HardenedBSD = "󰞌 "
+ Illumos = "󰈸 "
+ Kali = " "
+ Linux = " "
+ Mabox = " "
+ Macos = " "
+ Manjaro = " "
+ Mariner = " "
+ MidnightBSD = " "
+ Mint = " "
+ NetBSD = " "
+ NixOS = " "
+ Nobara = " "
+ OpenBSD = "󰈺 "
+ openSUSE = " "
+ OracleLinux = "󰌷 "
+ Pop = " "
+ Raspbian = " "
+ Redhat = " "
+ RedHatEnterprise = " "
+ RockyLinux = " "
+ Redox = "󰀘 "
+ Solus = "󰠳 "
+ SUSE = " "
+ Ubuntu = " "
+ Unknown = " "
+ Void = " "
+ Windows = "󰍲 "
 #
-# [package]
-# symbol = "󰏗 "
+[package]
+symbol = "󰏗 "
 #
-# [perl]
-# symbol = " "
+[perl]
+symbol = " "
 #
-# [php]
-# symbol = " "
+[php]
+symbol = " "
 #
 # [pijul_channel]
 # symbol = " "
@@ -265,17 +260,17 @@ format = "[$duration]($style) "
 # [pixi]
 # symbol = "󰏗 "
 #
-# [python]
-# symbol = " "
+[python]
+symbol = "  "
 #
 # [rlang]
 # symbol = "󰟔 "
 #
-# [ruby]
-# symbol = " "
+[ruby]
+symbol = " "
 #
-# [rust]
-# symbol = "󱘗 "
+[rust]
+symbol = "󱘗 "
 #
 # [scala]
 # symbol = " "
