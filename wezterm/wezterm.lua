@@ -54,7 +54,14 @@ config.initial_rows = 50
 
 config.window_decorations = "NONE"
 config.window_background_opacity = 0.95
-config.color_scheme = "Mono Theme (terminal.sexy)"
+
+local customMT = wezterm.color.get_builtin_schemes()["Mono Theme (terminal.sexy)"]
+customMT.brights[1] = "#3d3d3d"
+config.color_schemes = {
+	["MT"] = customMT,
+}
+config.color_scheme = "MT"
+
 config.colors = {
 	background = "#121212",
 	cursor_bg = "#1bfd9c",
