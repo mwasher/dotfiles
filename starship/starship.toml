@@ -40,17 +40,18 @@ yellow = "#777777"
 format = "$username$hostname$directory$git_branch$git_status$kubernetes$nix_shell$cmd_duration$line_break$character"
 
 [username]
-style_user = "bold blue"
+style_user = "blue"
 format = "[$user[|](grey)]($style)"
 show_always = true
 
 [hostname]
 ssh_only = false
 format = "[$hostname]($style) "
-style = "bold blue"
+style = "blue"
 
 [directory]
 read_only = " 󰌾"
+style = "grey"
 
 [character]
 success_symbol = "[❯](green)"
@@ -64,9 +65,11 @@ disabled = false
 
 [git_branch]
 format = "[$branch]($style)"
+style = "grey"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($ahead_behind$stashed)]($style) "
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)  "
+style = "red"
 conflicted = ""
 untracked = ""
 modified = ""
@@ -77,9 +80,10 @@ stashed = "≡"
 
 [cmd_duration]
 format = "[$duration]($style)"
-
+style = "grey"
 
 [aws]
+disabled = true
 symbol = "  "
 #
 # [buf]
@@ -89,10 +93,12 @@ symbol = "  "
 # symbol = " "
 #
 [c]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 [cpp]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 # [cmake]
 # symbol = " "
@@ -117,7 +123,8 @@ disabled = true
 # style = "yellow"
 #
 [docker_context]
-symbol = " "
+symbol = "  "
+format = "[$symbol$context]($style)"
 #
 # [elixir]
 # symbol = " "
@@ -142,7 +149,8 @@ symbol = "  "
 # tag_symbol = '  '
 #
 [golang]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 # [guix_shell]
 # symbol = " "
@@ -169,6 +177,7 @@ symbol = " "
 # format = "[$ssh_symbol$hostname]($style) "
 #
 [java]
+disabled = true
 symbol = " "
 #
 # [julia]
@@ -178,6 +187,7 @@ symbol = " "
 # symbol = " "
 #
 [lua]
+disabled = true
 symbol = "  "
 #
 # [memory_usage]
@@ -190,10 +200,12 @@ symbol = "  "
 # symbol = "󰆥 "
 #
 [nix_shell]
-symbol = " "
+symbol = "  "
+format = '[$symbol$state( \($name\))]($style) '
 #
 [nodejs]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 # [ocaml]
 # symbol = " "
@@ -246,13 +258,16 @@ symbol = " "
  Windows = "󰍲 "
 #
 [package]
-symbol = "󰏗 "
+disabled = true
+symbol = "󰏗  "
 #
 [perl]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 [php]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 # [pijul_channel]
 # symbol = " "
@@ -261,16 +276,19 @@ symbol = " "
 # symbol = "󰏗 "
 #
 [python]
+disabled = true
 symbol = "  "
 #
 # [rlang]
 # symbol = "󰟔 "
 #
 [ruby]
-symbol = " "
+disabled = true
+symbol = "  "
 #
 [rust]
-symbol = "󱘗 "
+disabled = true
+symbol = "󱘗  "
 #
 # [scala]
 # symbol = " "
