@@ -59,6 +59,8 @@ config.colors = {
 	background = "#121212",
 	cursor_bg = "#1bfd9c",
 	cursor_fg = "#191919",
+	selection_fg = "#121212",
+	selection_bg = "#7a7a7a",
 }
 
 config.inactive_pane_hsb = {
