@@ -44,8 +44,8 @@ size:
 users:
   user_you: {foreground: "#d1d1d1"}
   user_root: {foreground: "#7a7a7a"}
-  user_other: {foreground: "#708090"}
-  group_yours: {foreground: "#b2d8d8"}
+  user_other: {foreground: "#7a7a7a"}
+  group_yours: {foreground: "#d1d1d1"}
   group_other: {foreground: "#7a7a7a"}
   group_root: {foreground: "#7a7a7a"}
 
@@ -89,7 +89,7 @@ file_type:
   source: {foreground: "#708090"}
 
 punctuation: {foreground: "#d1d1d1"}
-date: {foreground: "#66b2b2"}
+date: {foreground: "#deeeed"}
 inode: {foreground: "#b2d8d8"}
 blocks: {foreground: "#7a7a7a"}
 header: {foreground: "#d1d1d1"}
