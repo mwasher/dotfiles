@@ -66,7 +66,7 @@ disabled = false
 format = "[$branch]($style)"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($ahead_behind$stashed)]($style) "
 conflicted = ""
 untracked = ""
 modified = ""
@@ -76,7 +76,7 @@ deleted = ""
 stashed = "≡"
 
 [cmd_duration]
-format = "[$duration]($style) "
+format = "[$duration]($style)"
 
 
 [aws]
