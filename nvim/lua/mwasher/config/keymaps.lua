@@ -13,12 +13,12 @@ local n_mappings = {
 	{ "<C-d>", "<C-d>zz", "Center on cursor on ^d" },
 	{ "n", "nzzzv", "Next search item centered" },
 	{ "N", "Nzzzv", "Previous search item centered" },
-	{ "<leader>j", ":bp<CR>", "Previous buffer", silent = true },
-	{ "<leader>k", ":bn<CR>", "Next buffer", silent = true },
-	{ "<leader>o", ":tabnew<CR>", "New tab", silent = true },
-	{ "<leader>i", ":tabprev<CR>", "Previous tab", silent = true },
-	{ "<leader>p", ":tabnext<CR>", "Next tab", silent = true },
-	{ "<leader>q", vim.diagnostic.setloclist, "Diagnostic [Q]uickfix list" },
+	-- { "<leader>j", ":bp<CR>", "Previous buffer", silent = true },
+	-- { "<leader>k", ":bn<CR>", "Next buffer", silent = true },
+	-- { "<leader>o", ":tabnew<CR>", "New tab", silent = true },
+	-- { "<leader>i", ":tabprev<CR>", "Previous tab", silent = true },
+	-- { "<leader>p", ":tabnext<CR>", "Next tab", silent = true },
+	-- { "<leader>q", vim.diagnostic.setloclist, "Diagnostic [Q]uickfix list" },
 }
 
 -- Mappings for insert mode
@@ -38,7 +38,6 @@ local s_mappings = {}
 local v_mappings = {
 	{ "<", "<gv", "Indent" }, -- allow multiple block indents
 	{ ">", ">gv", "Outdent" }, -- allow multiple block outdents
-	-- text block movement managed by mini.move
 }
 
 -- Mappings for terminal

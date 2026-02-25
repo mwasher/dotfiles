@@ -24,15 +24,16 @@ for option, value in pairs({
 	-- Enable mouse use in the editor
 	mouse = "a",
 
-	-- Default wrap to off with indicator and wapped lines are indented to the same level
+	-- Wrap indicator and wapped lines are indented to the same level
 	wrap = false,
 	showbreak = "↪ ",
 	breakindent = true,
 
-	-- Disable popup transparencies
-	pumblend = 0,
+	-- Float and popup settings
+  winborder = "rounded",
 	winblend = 0,
 	pumborder = "rounded",
+	pumblend = 0,
 
 	-- Move to start of line when moving with ctrl-b/f/d/u
 	startofline = true,

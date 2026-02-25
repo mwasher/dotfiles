@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 
-local myFont = "Iosevka Nerd Font"
+local myFont = "Iosevka Nerd Font Mono"
 
 local act = wezterm.action
 
@@ -52,7 +52,7 @@ config.use_fancy_tab_bar = true
 config.initial_cols = 180
 config.initial_rows = 50
 
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.95
 
 local customMT = wezterm.color.get_builtin_schemes()["Mono Theme (terminal.sexy)"]

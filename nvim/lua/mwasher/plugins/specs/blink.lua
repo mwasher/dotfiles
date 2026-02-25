@@ -1,79 +1,47 @@
--- Completions engine
+-- Blink completions engine
 -- https://github.com/Saghen/blink.cmp
 
 return {
 	"saghen/blink.cmp",
-	depdendencies = {
-		"rafamadriz/friendly-snippets",
-	},
+	event = "VeryLazy",
+	depdendencies = {},
 	version = "1.*",
 
 	opts = {
-		keymap = {
-			preset = "default",
-		},
 		appearance = {
-			use_nvim_cmp_as_default = true,
-			nerd_font_variant = "normal",
+			nerd_font_variant = "mono",
 		},
+
 		completion = {
-			list = {
-				selection = {
-					preselect = function(ctx)
-						return ctx.mode ~= "cmdline" and not require("blink.cmp").snippet_active({ direction = 1 })
-					end,
-					auto_insert = function(ctx)
-						return ctx.mode == "cmdline"
-					end,
-				},
-			},
 			menu = {
-				border = "rounded",
 				draw = {
 					treesitter = { "lsp" },
+					columns = {
+						{ "kind_icon" },
+						{ "label", "label_description", "source_name", gap = 5 },
+					},
 				},
-			},
-			trigger = {
-				prefetch_on_insert = true,
 			},
 			documentation = {
-				window = {
-					border = "rounded",
-				},
 				auto_show = true,
 				auto_show_delay_ms = 500,
 			},
-			accept = {
-				auto_brackets = {
-					enabled = true,
-				},
-			},
 		},
+
+		fuzzy = { implementation = "prefer_rust_with_warning" },
+
+		keymap = {
+			preset = "default",
+		},
+
+		snippets = {
+			preset = "luasnip",
+		},
+
 		sources = {
 			default = { "lsp", "path", "snippets", "buffer" },
 		},
-		cmdline = {
-			enabled = true,
-			completion = {
-				menu = { auto_show = true },
-				ghost_text = { enabled = false },
-			},
-			keymap = {
-				preset = "default",
-			},
-			sources = function()
-				local type = vim.fn.getcmdtype()
-				if type == ":" then
-					return { "cmdline" }
-				end
-				return {}
-			end,
-		},
-		signature = { enabled = false },
 	},
 
-	init = function()
-		local capabilities = require("blink.cmp").get_lsp_capabilities()
-		vim.lsp.config("*", { capabilities = capabilities })
-	end,
+	opts_extend = { "sources.default" },
 }

@@ -19,11 +19,11 @@ if command -v nvim &> /dev/null; then
 fi
 
 if command -v bat &> /dev/null; then
-  alias cat="bat --theme=ansi" 
-  alias catp="bat -p --theme=ansi" 
+  alias cat="bat --tabs=2 --theme=ansi" 
+  alias catp="bat --tabs=2 -p --theme=ansi" 
 elif command -v batcat &> /dev/null; then
-  alias catp="batcat -p --theme=ansi" 
-  alias cat="batcat --theme=ansi" 
+  alias catp="batcat --tabs=2 -p --theme=ansi" 
+  alias cat="batcat --tabs=2 --theme=ansi" 
 fi
 
 if command -v eza &> /dev/null; then

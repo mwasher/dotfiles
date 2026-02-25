@@ -40,14 +40,14 @@ yellow = "#777777"
 format = "$username$hostname$directory$git_branch$git_status$kubernetes$nix_shell$cmd_duration$line_break$character"
 
 [username]
-style_user = "blue"
+style_user = "white"
 format = "[$user[|](grey)]($style)"
-show_always = true
+show_always = false
 
 [hostname]
 ssh_only = false
 format = "[$hostname]($style) "
-style = "blue"
+style = "white"
 
 [directory]
 read_only = " 󰌾"
