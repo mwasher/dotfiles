@@ -42,7 +42,7 @@ format = "$username$hostname$directory$git_branch$git_status$kubernetes$nix_shel
 [username]
 style_user = "white"
 format = "[$user[|](grey)]($style)"
-show_always = true
+show_always = false
 
 [hostname]
 ssh_only = false

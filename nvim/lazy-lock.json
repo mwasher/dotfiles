@@ -7,7 +7,7 @@
   "lazy.nvim": { "branch": "main", "commit": "306a05526ada86a7b30af95c5cc81ffba93fef97" },
   "mini.nvim": { "branch": "main", "commit": "a95dc67ecff78de138543a20c20f29f47111b122" },
   "monoglow.nvim": { "branch": "main", "commit": "aef0e6677561cdeb7d6b81301544be5b9554afe9" },
-  "nvim-treesitter": { "branch": "main", "commit": "957f86ae3f049ab6681ed64c05b05768fcaed0d2" },
+  "nvim-treesitter": { "branch": "main", "commit": "4d9466677a5ceadef104eaa0fe08d60d91c4e9a7" },
   "smear-cursor.nvim": { "branch": "main", "commit": "c85bdbb25db096fbcf616bc4e1357bd61fe2c199" },
   "snacks.nvim": { "branch": "main", "commit": "fe7cfe9800a182274d0f868a74b7263b8c0c020b" },
   "summon.nvim": { "branch": "main", "commit": "3bd55bba568374e53187e1e7db0342a57c82ff9e" }
