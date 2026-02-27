@@ -1,3 +1,4 @@
+require("mwasher.config.utilities")
 require("mwasher.config.options")
 require("mwasher.config.keymaps")
 require("mwasher.config.autocmds")

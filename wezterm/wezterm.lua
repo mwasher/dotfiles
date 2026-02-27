@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+local is_nixos = os.getenv("NIX_PATH") ~= nil
+
 local myFont = "Iosevka Nerd Font"
 
 local act = wezterm.action
@@ -53,7 +55,12 @@ config.use_fancy_tab_bar = true
 config.initial_cols = 180
 config.initial_rows = 50
 
-config.window_decorations = "RESIZE"
+if is_nixos then
+  config.window_decorations = "NONE"
+else
+  config.window_decorations = "RESIZE"
+end
+
 config.window_background_opacity = 0.97
 
 local customMT = wezterm.color.get_builtin_schemes()["Mono Theme (terminal.sexy)"]
