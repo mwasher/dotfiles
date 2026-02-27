@@ -1,3 +1,6 @@
+-- Set to false of a nerd font is unavailable on the host
+vim.g.have_nerd_font = true
+
 -- Define desired vim.opt.* options and then apply them
 for option, value in pairs({
 	-- Default encoding

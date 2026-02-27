@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 
-local myFont = "Iosevka Nerd Font Mono"
+local myFont = "Iosevka Nerd Font"
 
 local act = wezterm.action
 
@@ -18,6 +18,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 	local title = tab_title(tab)
 	if tab.is_active then
 		return {
+      { Foreground = { Color = "#1bfd9c" } },
 			{ Background = { Color = "#191919" } },
 			{ Text = " " .. title .. " " },
 		}
@@ -53,7 +54,7 @@ config.initial_cols = 180
 config.initial_rows = 50
 
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.95
+config.window_background_opacity = 0.97
 
 local customMT = wezterm.color.get_builtin_schemes()["Mono Theme (terminal.sexy)"]
 customMT.brights[1] = "#3d3d3d"
@@ -71,7 +72,7 @@ config.colors = {
 }
 
 config.inactive_pane_hsb = {
-	saturation = 0.9,
+	saturation = 1.0, 
 	brightness = 0.8,
 }
 
@@ -83,8 +84,8 @@ config.window_padding = {
 }
 
 config.window_frame = {
-	font = wezterm.font({ family = myFont, weight = "Bold" }),
-	font_size = 11,
+	font = wezterm.font({ family = myFont }),
+	font_size = 12,
 
 	active_titlebar_bg = "#191919",
 }

@@ -40,7 +40,6 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 vim.lsp.config("*", {
 	capabilities = capabilities,
-
 })
 
 for _, bind in ipairs({ "grn", "gra", "gri", "grr", "grt" }) do
