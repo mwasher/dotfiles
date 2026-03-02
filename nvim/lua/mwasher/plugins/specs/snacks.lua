@@ -15,7 +15,7 @@ return {
 				enabled = false,
 			},
 			chunk = {
-				enabled = true,
+
 				only_current = true,
 				char = {
 					corner_top = "┌",
@@ -35,7 +35,9 @@ return {
 		},
 		notifier = { enabled = true },
 		picker = {
-			enabled = true,
+      layout = {
+        preset = "ivy",
+      },
 			sources = {
 				explorer = {
 					layout = {
@@ -44,6 +46,14 @@ return {
 						},
 					},
 				},
+			},
+		},
+		scroll = {
+			enabled = true,
+			animate = {
+				duration = { step = 15, total = 250 },
+				easing = "inOutQuad",
+				fps = 60,
 			},
 		},
 	},
