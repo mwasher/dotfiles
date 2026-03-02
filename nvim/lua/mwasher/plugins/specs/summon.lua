@@ -11,16 +11,16 @@ return {
 			height = 0.85,
 			border = "rounded",
 			close_keymap = "<Esc><Esc>",
-			highlights = {
-				float = { bg = "#121212" },
-				border = { fg = "#2a2a2a", bg = "#121212" },
-				title = { fg = "#1bfd9c", bg = "#121212", bold = true },
-			},
+      highlights = {
+          float = { bg = "none" },
+          border = { fg = "#1bfd9c", bg = "none" },
+          title = { fg = "#1bfd9c", bg = "none" },
+      },
 			commands = {
 				terminal = {
 					type = "terminal",
 					command = "zsh",
-					title = "zsh",
+					title = " zsh ",
 					keymap = "<leader>z",
 				},
 				notes = {
