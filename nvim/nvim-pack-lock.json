@@ -1,9 +1,8 @@
 {
   "plugins": {
-    "blink.cmp": {
-      "rev": "4b18c32adef2898f95cdef6192cbd5796c1a332d",
-      "src": "https://github.com/Saghen/blink.cmp",
-      "version": ">=0.0.0"
+    "mini.nvim": {
+      "rev": "9990c41f10f54f29a888d13024c9f765037bde23",
+      "src": "https://github.com/echasnovski/mini.nvim"
     },
     "monoglow.nvim": {
       "rev": "159c170ed1d5648d302089b08f92603d2cc75901",

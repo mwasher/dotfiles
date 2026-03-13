@@ -15,7 +15,6 @@ return {
 				enabled = false,
 			},
 			chunk = {
-
 				only_current = true,
 				char = {
 					corner_top = "┌",
