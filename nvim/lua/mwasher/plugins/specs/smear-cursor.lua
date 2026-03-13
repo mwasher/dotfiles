@@ -1,12 +1,9 @@
 -- Animate and smear the cursor for easier visibility
 -- https://github.com/sphamba/smear-cursor.nvim
 
-return {
-	"sphamba/smear-cursor.nvim",
-	event = "VeryLazy",
+vim.pack.add({ "https://github.com/sphamba/smear-cursor.nvim" })
 
-	opts = {
-    cursor_color = "#1bfd9c",
-    smear_between_neighbor_lines = true,
-  },
-}
+require("smear_cursor").setup({
+  cursor_color = "#1bfd9c",
+  smear_between_neighbor_lines = true,
+})

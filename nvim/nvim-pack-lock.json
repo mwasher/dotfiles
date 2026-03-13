@@ -1,0 +1,21 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "4b18c32adef2898f95cdef6192cbd5796c1a332d",
+      "src": "https://github.com/Saghen/blink.cmp",
+      "version": ">=0.0.0"
+    },
+    "monoglow.nvim": {
+      "rev": "159c170ed1d5648d302089b08f92603d2cc75901",
+      "src": "https://github.com/wnkz/monoglow.nvim"
+    },
+    "smear-cursor.nvim": {
+      "rev": "c85bdbb25db096fbcf616bc4e1357bd61fe2c199",
+      "src": "https://github.com/sphamba/smear-cursor.nvim"
+    },
+    "summon.nvim": {
+      "rev": "4be4b11a0ddd3cdf197148472885ffedece7e419",
+      "src": "https://github.com/salkhalil/summon.nvim"
+    }
+  }
+}
