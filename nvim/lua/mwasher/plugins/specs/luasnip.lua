@@ -1,12 +1,12 @@
 -- Luasnip snippet engine
 -- https://github.com/L3MON4D3/LuaSnip
 
-return {
-	"L3MON4D3/LuaSnip",
-	dependencies = { "rafamadriz/friendly-snippets" },
-	version = "v2.*",
+vim.pack.add({
+	{
+		src = "https://github.com/L3MON4D3/LuaSnip",
+		version = vim.version.range("2.*"),
+	},
+	"https://github.com/rafamadriz/friendly-snippets",
+})
 
-	init = function()
-		require("luasnip.loaders.from_vscode").lazy_load()
-	end,
-}
+require("luasnip.loaders.from_vscode").lazy_load()
