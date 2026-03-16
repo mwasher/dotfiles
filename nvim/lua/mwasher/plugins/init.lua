@@ -5,6 +5,7 @@ require("mwasher.plugins.specs.conform")
 require("mwasher.plugins.specs.luasnip")
 require("mwasher.plugins.specs.blink")
 require("mwasher.plugins.specs.nvim-treesitter")
+require("mwasher.plugins.specs.oil")
 require("mwasher.plugins.specs.smear-cursor")
 require("mwasher.plugins.specs.summon")
 
