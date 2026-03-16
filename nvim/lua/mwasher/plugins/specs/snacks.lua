@@ -96,8 +96,12 @@ end
 
 vim.api.nvim_create_autocmd("User", {
 	callback = function()
+		Snacks.toggle.option("wrap", { name = "Wrap" }):map("<leader>uw")
+		Snacks.toggle.option("relativenumber", { name = "Relative Number" }):map("<leader>ur")
 		Snacks.toggle.line_number():map("<leader>ul")
 		Snacks.toggle.diagnostics():map("<leader>ud")
+		Snacks.toggle.treesitter():map("<leader>ut")
+		Snacks.toggle.zoom():map("<leader>uz")
 	end,
 })
 

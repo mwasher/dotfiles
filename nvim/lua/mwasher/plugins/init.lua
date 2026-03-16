@@ -7,3 +7,7 @@ require("mwasher.plugins.specs.blink")
 require("mwasher.plugins.specs.nvim-treesitter")
 require("mwasher.plugins.specs.smear-cursor")
 require("mwasher.plugins.specs.summon")
+
+if is_nixos() then
+	-- TODO: maybe use mason for non-nixos?
+end

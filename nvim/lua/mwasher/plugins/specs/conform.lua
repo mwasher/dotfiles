@@ -6,6 +6,7 @@ vim.pack.add({ "https://github.com/stevearc/conform.nvim" })
 local formatters = {
 	lua = { "stylua" },
 	go = { "gofumpt" },
+	python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 }
 
 require("conform").setup({

@@ -3,6 +3,7 @@
 local servers = {
 	"lua_ls",
 	"gopls",
+	"basedpyright",
 }
 
 local config = {
