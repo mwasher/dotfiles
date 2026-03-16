@@ -33,9 +33,9 @@ for option, value in pairs({
 	breakindent = true,
 
 	-- Float and popup settings
-  winborder = "rounded",
+	winborder = "single",
 	winblend = 0,
-	pumborder = "rounded",
+	pumborder = "single",
 	pumblend = 0,
 
 	-- Move to start of line when moving with ctrl-b/f/d/u

@@ -13,29 +13,31 @@
 -- blue1 	#b2d8d8
 -- blue2 	#66b2b2
 
-vim.pack.add({"https://github.com/wnkz/monoglow.nvim"})
+vim.pack.add({ "https://github.com/wnkz/monoglow.nvim" })
 
 require("monoglow").setup({
-  on_colors = function(colors)
-    -- colors.glow = "#fd1b7c"
-  end,
+	on_colors = function(colors)
+		-- colors.glow = "#fd1b7c"
+	end,
 
-  on_highlights = function(hl, c)
-    hl.Normal = { bg = "none" }
-    hl.SignColumn = { bg = "none" }
-    hl.CursorLineNr = { fg = c.glow }
-    hl.NormalFloat = { bg = "none" }
-    hl.FloatTitle = { fg = c.glow, bg = "none" }
-    hl.FloatBorder = { fg = c.glow, bg = "none" }
-    hl.DiagnosticInfo = { fg = c.glow, bg = "none" }
-    
-    hl.MiniStatuslineModeNormal = { fg = c.glow, bg = c.gray2 }
-    hl.MiniStatuslineModeInsert = { fg = c.gray1, bg = c.glow }
-    hl.MiniStatuslineModeVisual = { fg = c.gray1, bg = c.lack }
-    hl.MiniStatuslineFilename = { fg = c.gray6 }
+	on_highlights = function(hl, c)
+		hl.Normal = { bg = "none" }
+		hl.SignColumn = { bg = "none" }
+		hl.CursorLineNr = { fg = c.glow }
+		hl.NormalFloat = { bg = "none" }
+		hl.FloatTitle = { fg = c.glow, bg = "none" }
+		hl.FloatBorder = { fg = c.glow, bg = "none" }
+		hl.DiagnosticInfo = { fg = c.glow, bg = "none" }
 
-    hl.SnacksIndentScope = { fg = c.glow }
-  end,
+		hl["@boolean"] = { fg = c.lack }
+
+		hl.MiniStatuslineModeNormal = { fg = c.glow, bg = c.gray2 }
+		hl.MiniStatuslineModeInsert = { fg = c.gray1, bg = c.glow }
+		hl.MiniStatuslineModeVisual = { fg = c.gray1, bg = c.lack }
+		hl.MiniStatuslineFilename = { fg = c.gray6 }
+
+		hl.SnacksIndentScope = { fg = c.glow }
+	end,
 })
 
 vim.cmd.colorscheme("monoglow")
