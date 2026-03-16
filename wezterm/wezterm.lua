@@ -11,6 +11,7 @@ local wezterm = require("wezterm")
 local wezterm = require("wezterm")
 
 local is_nixos = os.getenv("NIX_PATH") ~= nil
+local is_darwin = wezterm.target_triple:find("darwin") ~= nil
 
 local myFont = "Iosevka Nerd Font"
 
@@ -88,9 +89,13 @@ config.colors = {
 	selection_bg = "#7a7a7a",
 }
 
+if is_darwin then
+	config.colors.background = "#101010"
+end
+
 config.inactive_pane_hsb = {
 	saturation = 1.0,
-	brightness = 0.8,
+	brightness = 0.9,
 }
 
 config.window_padding = {
