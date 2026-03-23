@@ -8,6 +8,7 @@ require("mwasher.plugins.specs.nvim-treesitter")
 require("mwasher.plugins.specs.oil")
 require("mwasher.plugins.specs.smear-cursor")
 require("mwasher.plugins.specs.summon")
+require("mwasher.plugins.specs.arc")
 
 if is_nixos() then
 	-- TODO: maybe use mason for non-nixos?
