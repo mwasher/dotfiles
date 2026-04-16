@@ -1,3 +1,4 @@
+require("mwasher.plugins.specs.plenary")
 require("mwasher.plugins.specs.mini")
 require("mwasher.plugins.specs.snacks")
 require("mwasher.plugins.specs.monoglow")
@@ -5,11 +6,13 @@ require("mwasher.plugins.specs.conform")
 require("mwasher.plugins.specs.luasnip")
 require("mwasher.plugins.specs.blink")
 require("mwasher.plugins.specs.nvim-treesitter")
+require("mwasher.plugins.specs.aiwaku")
+require("mwasher.plugins.specs.none-ls")
 require("mwasher.plugins.specs.oil")
 require("mwasher.plugins.specs.smear-cursor")
 require("mwasher.plugins.specs.summon")
 require("mwasher.plugins.specs.arc")
 
 if is_nixos() then
-	-- TODO: maybe use mason for non-nixos?
+  -- TODO: maybe use mason for non-nixos?
 end

@@ -5,6 +5,10 @@
       "src": "https://github.com/L3MON4D3/LuaSnip",
       "version": "2.0.0 - 3.0.0"
     },
+    "aiwaku.nvim": {
+      "rev": "3612508200ede97f3aab3f6d923bdbf2cbdceb2c",
+      "src": "https://github.com/juhaku/aiwaku.nvim"
+    },
     "arc.nvim": {
       "rev": "d893ffa0c48d933856783ef0bed5425fb5990676",
       "src": "https://codeberg.org/knight9114/arc.nvim"
@@ -30,6 +34,10 @@
       "rev": "159c170ed1d5648d302089b08f92603d2cc75901",
       "src": "https://github.com/wnkz/monoglow.nvim"
     },
+    "none-ls.nvim": {
+      "rev": "899e93f9f10251d7220b188eba1b837c0ba27927",
+      "src": "https://github.com/nvimtools/none-ls.nvim"
+    },
     "nvim-treesitter": {
       "rev": "2f5d4c3f3c675962242096bcc8e586d76dd72eb2",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -37,6 +45,10 @@
     "oil.nvim": {
       "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
       "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "smear-cursor.nvim": {
       "rev": "c85bdbb25db096fbcf616bc4e1357bd61fe2c199",
