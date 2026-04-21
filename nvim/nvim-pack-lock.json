@@ -58,6 +58,10 @@
       "rev": "9912042fc8bca2209105526ac7534e9a0c2071b2",
       "src": "https://github.com/folke/snacks.nvim"
     },
+    "statuscol.nvim": {
+      "rev": "c46172d0911aa5d49ba5f39f4351d1bb7aa289cc",
+      "src": "https://github.com/luukvbaal/statuscol.nvim"
+    },
     "summon.nvim": {
       "rev": "4be4b11a0ddd3cdf197148472885ffedece7e419",
       "src": "https://github.com/salkhalil/summon.nvim"

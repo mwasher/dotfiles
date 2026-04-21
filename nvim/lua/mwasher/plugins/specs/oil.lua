@@ -15,9 +15,10 @@ require("oil").setup({
     show_hidden = true,
   },
   float = {
-    max_width = 0.9,
+    max_width = 0.8,
+    max_height = 0.7,
     preview_split = "right",
   },
 })
 
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Oil" })
+vim.keymap.set("n", "-", "<CMD>Oil --preview --float<CR>", { desc = "Oil" })

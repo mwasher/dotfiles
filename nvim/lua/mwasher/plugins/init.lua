@@ -10,6 +10,7 @@ require("mwasher.plugins.specs.aiwaku")
 require("mwasher.plugins.specs.none-ls")
 require("mwasher.plugins.specs.oil")
 require("mwasher.plugins.specs.smear-cursor")
+require("mwasher.plugins.specs.statuscol")
 require("mwasher.plugins.specs.summon")
 require("mwasher.plugins.specs.arc")
 

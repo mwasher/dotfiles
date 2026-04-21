@@ -25,7 +25,7 @@ esac
 [[ -f $ZDOTDIR/helpers.zsh ]] && source $ZDOTDIR/helpers.zsh
 
 # Load local config if present
-[[ -f $ZDOTDIR/.zlocal ]] && source $ZDOTDIR/.zlocal
+[[ -f $HOME/.zlocal ]] && source $HOME/.zlocal
 
 # Create directory for local installed tools
 mkdir -p $HOME/.local/bin
