@@ -74,12 +74,7 @@ end
 
 config.window_background_opacity = 0.85
 
-local customMT = wezterm.color.get_builtin_schemes()["Mono Theme (terminal.sexy)"]
-customMT.brights[1] = "#3d3d3d"
-config.color_schemes = {
-	["MT"] = customMT,
-}
-config.color_scheme = "MT"
+config.color_scheme = "Mono Glow"
 
 config.colors = {
 	background = "#040404",
