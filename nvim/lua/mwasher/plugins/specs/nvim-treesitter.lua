@@ -5,6 +5,15 @@ vim.pack.add({ "https://github.com/nvim-treesitter/nvim-treesitter" })
 
 if is_nixos() then
 	vim.opt.rtp:append("/home/mwasher/.local/share/nvim/site/pack/hm/start/nvim-treesitter-grammars")
+else
+	require("nvim-treesitter").install({
+		"bash",
+		"lua",
+		"markdown",
+		"python",
+		"go",
+		"json",
+	})
 end
 
 vim.api.nvim_create_autocmd("FileType", {
