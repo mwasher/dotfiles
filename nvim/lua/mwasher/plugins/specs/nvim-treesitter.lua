@@ -12,7 +12,23 @@ else
 		"markdown",
 		"python",
 		"go",
+		"c",
+		"cpp",
+		"c_sharp",
 		"json",
+		"html",
+		"javascript",
+		"css",
+	})
+end
+
+if not is_nixos() then
+	vim.api.nvim_create_autocmd("VimEnter", {
+		callback = function()
+			if not is_nixos() then
+				vim.cmd("silent TSUpdate")
+			end
+		end,
 	})
 end
 
