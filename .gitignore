@@ -2,5 +2,4 @@
 .zcompdump
 .zsh_sessions
 zsh/plugins
-nvim/nvim-pack-lock.json
 deploy.log
