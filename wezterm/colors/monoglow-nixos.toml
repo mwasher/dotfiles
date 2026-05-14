@@ -15,7 +15,7 @@ ansi = [
   "#708090",
   "#66b2b2",
   "#f1f1f1",
-]
+];
 
 brights = [
   "#4a4a4a",
@@ -26,29 +26,29 @@ brights = [
   "#879aad",
   "#49c4c4",
   "#ffffff",
-]
+];
 
 tab_bar = [
   background = "#121212",
   active_tab = [
     bg_color = "#dddddd",
     fg_color = "#0e0e0e",
-  ],
+  ];
   inactive_tab = [
     fg_color = "#7a7a7a",
     bg_color = "#2a2a2a",
-  ],
+  ];
   inactive_tab_hover = [
     bg_color = "#444444",
     fg_color = "#cccccc",
-  ],
+  ];
   new_tab = [
     bg_color = "#2a2a2a",
     fg_color = "#7a7a7a",
-  ],
+  ];
   new_tab_hover = [
     bg_color = "#444444",
     fg_color = "#cccccc",
-  ],
-]
+  ];
+];
 
