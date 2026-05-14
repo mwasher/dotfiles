@@ -1,10 +1,3 @@
-# WezTerm color scheme
-# https://wezterm.org/config/appearance.html
-
-name = "Mono Glow"
-author = "wnkz (https://github.com/wnkz)"
-origin_url = "https://github.com/wnkz/monoglow.nvim/raw/main/extras/wezterm/monoglow_z.toml"
-
 background = "#121212"
 foreground = "#cccccc"
 cursor_bg = "#cccccc"

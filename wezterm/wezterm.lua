@@ -27,22 +27,22 @@ function tab_title(tab_info)
 	return tab_info.active_pane.title
 end
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-	local title = tab_title(tab)
-	if tab.is_active then
-		return {
-			{ Foreground = { Color = "#1bfd9c" } },
-			{ Background = { Color = "#191919" } },
-			{ Text = " " .. title .. " " },
-		}
-	else
-		return {
-			{ Background = { Color = "#191919" } },
-			{ Text = " " .. title .. " " },
-		}
-	end
-	return title
-end)
+-- wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+-- 	local title = tab_title(tab)
+-- 	if tab.is_active then
+-- 		return {
+-- 			{ Foreground = { Color = "#1bfd9c" } },
+-- 			{ Background = { Color = "#191919" } },
+-- 			{ Text = " " .. title .. " " },
+-- 		}
+-- 	else
+-- 		return {
+-- 			{ Background = { Color = "#191919" } },
+-- 			{ Text = " " .. title .. " " },
+-- 		}
+-- 	end
+-- 	return title
+-- end)
 
 local config = {}
 
@@ -76,14 +76,6 @@ config.window_background_opacity = 0.85
 
 config.color_scheme = "Mono Glow"
 
-config.colors = {
-	background = "#040404",
-	cursor_bg = "#1bfd9c",
-	cursor_fg = "#191919",
-	selection_fg = "#121212",
-	selection_bg = "#7a7a7a",
-}
-
 if is_darwin then
 	config.colors.background = "#101010"
 end
@@ -103,8 +95,6 @@ config.window_padding = {
 config.window_frame = {
 	font = wezterm.font({ family = myFont }),
 	font_size = 12,
-
-	active_titlebar_bg = "#191919",
 }
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 500 }
