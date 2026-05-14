@@ -1,1 +1,2 @@
-require 'mwasher'
+-- this is a test
+require("mwasher")
