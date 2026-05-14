@@ -76,10 +76,6 @@ config.window_background_opacity = 0.85
 
 config.color_scheme = "Mono Glow"
 
-if is_darwin then
-	config.colors.background = "#101010"
-end
-
 config.inactive_pane_hsb = {
 	saturation = 1.0,
 	brightness = 0.9,
