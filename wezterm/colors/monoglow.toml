@@ -38,19 +38,19 @@ brights = [
 background = "#121212"
 
 [colors.tab_bar.active_tab]
-bg_color = "#dddddd"
-fg_color = "#0e0e0e"
+bg_color = "#121212"
+fg_color = "#1bfd9c"
 
 [colors.tab_bar.inactive_tab]
-bg_color = "#2a2a2a"
+bg_color = "#121212"
 fg_color = "#7a7a7a"
 
 [colors.tab_bar.inactive_tab_hover]
-bg_color = "#444444"
+bg_color = "#2a2a2a"
 fg_color = "#cccccc"
 
 [colors.tab_bar.new_tab]
-bg_color = "#2a2a2a"
+bg_color = "#121212"
 fg_color = "#7a7a7a"
 
 [colors.tab_bar.new_tab_hover]
