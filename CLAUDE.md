@@ -20,7 +20,7 @@ To add a new dependency across all platforms, add it to `commonDeps` in `bootstr
 
 ## Neovim (`nvim/`)
 
-Uses **Neovim 0.11+ native features** — no external plugin manager. Plugins are loaded with `vim.pack.add()` (built-in). LSP is configured with the native `vim.lsp` API (no lspconfig).
+Uses **Neovim 0.11+ native features** — no external plugin manager. Plugins are loaded with `vim.pack.add()` (built-in). LSP is configured with the native `vim.lsp` API (no lspconfig). A `nvim-pack-lock.json` lockfile tracks plugin versions.
 
 ### Entry points
 
@@ -42,13 +42,17 @@ Each file in `lua/mwasher/plugins/specs/` is self-contained: calls `vim.pack.add
 | `oil.lua` | oil.nvim | Floating file manager (`-`) |
 | `mini.lua` | mini.nvim | Various mini modules |
 | `monoglow.lua` | monoglow | Colorscheme |
-| `arc.lua` | arc.nvim | Arc browser integration |
+| `arc.lua` | arc.nvim | In-document jump navigation (`<leader>f`) |
 | `smear-cursor.lua` | smear-cursor | Cursor animation |
+| `aiwaku.lua` | aiwaku | AI agent integration (Claude/Devin terminal panes) |
+| `none-ls.lua` | none-ls | Diagnostics / linting |
+| `statuscol.lua` | statuscol | Status column configuration |
+| `plenary.lua` | plenary.nvim | Utility library (dependency) |
 | `summon.lua` | summon | (custom/local) |
 
 ### LSP
 
-Servers enabled: `lua_ls`, `gopls`, `basedpyright`. Config lives in `lua/mwasher/config/lsp.lua`; per-server options in `lua/mwasher/config/lsp-servers/`. Semantic tokens are disabled (`semanticTokensProvider = nil`). Custom commands: `LspStart`, `LspStop`, `LspRestart`, `LspLog`, `LspInfo`.
+Servers enabled: `lua_ls`, `gopls`, `basedpyright`, `json_ls`, `yaml_ls`, `bash_ls`. Config lives in `lua/mwasher/config/lsp.lua`; per-server options in `lua/mwasher/config/lsp-servers/`. Semantic tokens are disabled (`semanticTokensProvider = nil`). Custom commands: `LspStart`, `LspStop`, `LspRestart`, `LspLog`, `LspInfo`.
 
 ### Key bindings (non-obvious)
 
@@ -56,6 +60,7 @@ Servers enabled: `lua_ls`, `gopls`, `basedpyright`. Config lives in `lua/mwasher
 - `<leader><space>` — smart file picker (Snacks)
 - `<leader>e` — file explorer (Snacks)
 - `<leader>/` — grep (Snacks)
+- `<leader>f` — in-document jump (arc.nvim)
 - `<leader>l*` — LSP actions (`lr` rename, `la` code action, `lh` inlay hints, etc.)
 - `<leader>d*` — diagnostics (`dn`/`dp` next/prev, `dv` toggle virtual lines)
 - `-` — Oil float
@@ -74,9 +79,11 @@ Symlinked to `~/.config/zsh`. Entry point is `~/.zshenv` → sets `ZDOTDIR`.
 - `helpers.zsh` — `git_current_branch()` for prompt; `plugin-load()` for minimal plugin management (clones from GitHub, no external manager)
 - `plugins/` — gitignored; populated at runtime by `plugin-load` (zsh-autosuggestions, zsh-syntax-highlighting)
 
+FZF is auto-cloned to `~/.local/share/fzf` and integrated via `.zshrc`. Kubectl and uv completions are also loaded. History: 4096 entries, persistent, extended format. Vi-mode keybindings; `Ctrl-Space` accepts autosuggestion.
+
 ## WezTerm (`wezterm/`)
 
-`wezterm.lua` is symlinked to `~/.config/wezterm/`. Leader key: `Alt-a`. Pane splits: `Alt-v` (horizontal), `Alt-s` (vertical). Pane navigation: `Alt-hjkl`. Font: Iosevka Nerd Font. Color scheme is a custom variant of "Mono Theme" with green `#1bfd9c` and red `#fd1b7c` accents.
+`wezterm.lua` is symlinked to `~/.config/wezterm/`. Leader key: `Alt-a`. Pane splits: `Alt-v` (horizontal), `Alt-s` (vertical). Pane navigation: `Alt-hjkl`. Pane resizing: `Alt-Shift-hjkl`. Font: Iosevka Nerd Font (size 13). Window: 180×50, 92% opacity. Color scheme is defined in `wezterm/colors/monoglow.toml` — a custom "Mono Glow" palette with green `#1bfd9c` and red `#fd1b7c` accents.
 
 ## Starship (`starship/`)
 
@@ -85,3 +92,13 @@ Symlinked to `~/.config/zsh`. Entry point is `~/.zshenv` → sets `ZDOTDIR`.
 ## Eza (`eza/`)
 
 `theme.yml` symlinked to `~/.config/eza/`. Customizes eza file/dir colors.
+
+## Hyprland (`hypr/`)
+
+`hyprland.conf` symlinked to `~/.config/hypr/` (Linux/Wayland only). Key settings:
+
+- Monitor: 3840×2160@240 (auto-scale)
+- Terminal: wezterm; Browser: zen-beta
+- Autostart: hyprpaper (wallpaper daemon)
+- Layout: dwindle; border 2px, gaps 5px inner / 20px outer, rounding 10px
+- Wallpaper image lives in `artifacts/wallpaper.png`
